@@ -20,17 +20,33 @@ class HomeState extends State<HomeWidget> {
             decoration: BoxDecoration(
               color: Colors.blue,
             ),
-            child: Text('Drawer Header'),
+            child: Text('Меню'),
           ),
           ListTile(
-            title: const Text('Item 1'),
+            title: const Text('Мій профіль'),
             onTap: () {
               Navigator.pop(context);
             },
           ),
           ListTile(
-            title: const Text('Item 2'),
+            title: const Text('Вийти'),
             onTap: () {
+              AlertDialog(
+                title: Text('Reset settings?'),
+                content: Text('This will reset your device to its default factory settings.'),
+                actions: [
+                  FlatButton(
+                    textColor: Color(0xFF6200EE),
+                    onPressed: () {},
+                    child: Text('CANCEL'),
+                  ),
+                  FlatButton(
+                    textColor: Color(0xFF6200EE),
+                    onPressed: () {},
+                    child: Text('ACCEPT'),
+                  ),
+                ],
+              );
               Navigator.pop(context);
             },
           ),
