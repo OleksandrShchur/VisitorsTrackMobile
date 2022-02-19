@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:helloworld/signup_widget.dart';
 import 'package:helloworld/theme.dart';
+import 'package:helloworld/home.dart';
 
 //Widget for input
 
@@ -116,7 +117,9 @@ class LoginState extends State<LoginWidget> {
                                 style: TextStyle(fontFamily: "SignikaSemiBold", color: Colors.white, fontSize: 22.0),
                               ),
                             ),
-                            onPressed: () => displaySnackBar("Login clicked"),
+                            onPressed: () {
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => HomeWidget()));
+                            },
                           ),
                         ),
                         Container(
@@ -219,20 +222,6 @@ class LoginState extends State<LoginWidget> {
                   ),
                 ],
               ),
-            ),
-          ],
-        ),
-      ),
-      drawer: Drawer(
-        child: ListView(
-          children: <Widget>[
-            ListTile(
-              title: Text("Меню 1"),
-              trailing: Icon(Icons.arrow_back),
-            ),
-            ListTile(
-              title: Text("Меню 2"),
-              trailing: Icon(Icons.arrow_downward),
             ),
           ],
         ),
