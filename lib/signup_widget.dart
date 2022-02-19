@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:helloworld/theme.dart';
 import 'package:helloworld/login_widget.dart';
+import 'package:helloworld/home.dart';
 
 //Widget for input
 
@@ -163,7 +164,7 @@ class SignUpState extends State<SignUpWidget> {
                             ),
                           ),
                           onPressed: () {
-                            Navigator.pop(context);
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => HomeWidget()));
                           },
                         ),
                       )
