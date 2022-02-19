@@ -12,38 +12,30 @@ class HomeState extends State<HomeWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
-        child: ListView(
-          children: <Widget>[
-            ListTile(
-              title: Text("Меню 1"),
-              trailing: Icon(Icons.arrow_back),
+        drawer: Drawer(
+      child: ListView(
+        padding: EdgeInsets.zero,
+        children: [
+          const DrawerHeader(
+            decoration: BoxDecoration(
+              color: Colors.blue,
             ),
-            ListTile(
-                title: Text("Меню 2"),
-                trailing: Icon(Icons.arrow_downward),
-                onTap: () {
-                  AlertDialog(
-                    title: Text('Reset settings?'),
-                    content: Text('This will reset your device to its default factory settings.'),
-                    actions: [
-                      FlatButton(
-                        textColor: Color(0xFF6200EE),
-                        onPressed: () {},
-                        child: Text('CANCEL'),
-                      ),
-                      FlatButton(
-                        textColor: Color(0xFF6200EE),
-                        onPressed: () {},
-                        child: Text('ACCEPT'),
-                      ),
-                    ],
-                  );
-                  Navigator.pop(context);
-                })
-          ],
-        ),
+            child: Text('Drawer Header'),
+          ),
+          ListTile(
+            title: const Text('Item 1'),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+          ListTile(
+            title: const Text('Item 2'),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+        ],
       ),
-    );
+    ));
   }
 }
