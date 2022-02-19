@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:helloworld/signup_widget.dart';
 import 'package:helloworld/theme.dart';
-import 'package:helloworld/home.dart';
+import 'package:helloworld/home_widget.dart';
 
 //Widget for input
 
