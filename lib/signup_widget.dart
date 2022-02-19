@@ -57,7 +57,7 @@ class SignUpState extends State<SignUpWidget> {
                                 color: Colors.black,
                                 size: 22.0,
                               ),
-                              hintText: "Enter name",
+                              hintText: "Введіть ім'я",
                               hintStyle: TextStyle(fontFamily: "SignikaSemiBold", fontSize: 18.0)),
                         ),
                       ),
@@ -80,7 +80,7 @@ class SignUpState extends State<SignUpWidget> {
                                 color: Colors.black,
                                 size: 22.0,
                               ),
-                              hintText: "Enter email",
+                              hintText: "Введіть email",
                               hintStyle: TextStyle(fontFamily: "SignikaSemiBold", fontSize: 18.0)),
                         ),
                       ),
@@ -102,7 +102,7 @@ class SignUpState extends State<SignUpWidget> {
                                 color: Colors.black,
                                 size: 22.0,
                               ),
-                              hintText: "Enter password",
+                              hintText: "Введіть пароль",
                               hintStyle: TextStyle(fontFamily: "SignikaSemiBold", fontSize: 18.0)),
                         ),
                       ),
@@ -124,7 +124,7 @@ class SignUpState extends State<SignUpWidget> {
                                 color: Colors.black,
                                 size: 22.0,
                               ),
-                              hintText: "Confirm password",
+                              hintText: "Повторіть пароль",
                               hintStyle: TextStyle(fontFamily: "SignikaSemiBold", fontSize: 18.0)),
                         ),
                       ),
@@ -159,7 +159,7 @@ class SignUpState extends State<SignUpWidget> {
                           child: Padding(
                             padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 42.0),
                             child: Text(
-                              "Sign Up",
+                              "Зареєструватися",
                               style: TextStyle(fontFamily: "SignikaSemiBold", color: Colors.white, fontSize: 22.0),
                             ),
                           ),
@@ -178,7 +178,7 @@ class SignUpState extends State<SignUpWidget> {
             padding: EdgeInsets.only(top: 10.0),
             child: FlatButton(
               child: Text(
-                "Already have account?",
+                "Уже маєте акаунт?",
                 style: TextStyle(color: Colors.white, fontSize: 18.0, fontFamily: "SignikaRegular"),
               ),
               onPressed: () {},
@@ -205,7 +205,7 @@ class SignUpState extends State<SignUpWidget> {
               child: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 42.0),
                 child: Text(
-                  "Login",
+                  "Увійти",
                   style: TextStyle(fontFamily: "SignikaSemiBold", color: Colors.black, fontSize: 22.0),
                 ),
               ),

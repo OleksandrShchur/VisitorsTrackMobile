@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Visitors Tracker',
+      title: 'Visitors Tracker Mobile',
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
       ),

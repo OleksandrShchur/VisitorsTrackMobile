@@ -56,7 +56,7 @@ class LoginState extends State<LoginWidget> {
                                   color: Colors.black,
                                   size: 22.0,
                                 ),
-                                hintText: "Enter email",
+                                hintText: "Введіть email",
                                 hintStyle: TextStyle(fontFamily: "SignikaSemiBold", fontSize: 18.0)),
                           ),
                         ),
@@ -78,7 +78,7 @@ class LoginState extends State<LoginWidget> {
                                   color: Colors.black,
                                   size: 22.0,
                                 ),
-                                hintText: "Enter password",
+                                hintText: "Введіть пароль",
                                 hintStyle: TextStyle(fontFamily: "SignikaSemiBold", fontSize: 18.0)),
                           ),
                         ),
@@ -113,7 +113,7 @@ class LoginState extends State<LoginWidget> {
                             child: Padding(
                               padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 42.0),
                               child: Text(
-                                "Login",
+                                "Увійти",
                                 style: TextStyle(fontFamily: "SignikaSemiBold", color: Colors.white, fontSize: 22.0),
                               ),
                             ),
@@ -125,7 +125,7 @@ class LoginState extends State<LoginWidget> {
                         Container(
                           child: FlatButton(
                             child: Text(
-                              "Forgot Password?",
+                              "Забули пароль?",
                               style: TextStyle(decoration: TextDecoration.underline, color: Colors.black, fontSize: 18.0, fontFamily: "SignikaRegular"),
                             ),
                             onPressed: () {
@@ -143,7 +143,7 @@ class LoginState extends State<LoginWidget> {
               padding: EdgeInsets.only(top: 10.0),
               child: FlatButton(
                 child: Text(
-                  "Not have account?",
+                  "Досі без акаунту?",
                   style: TextStyle(color: Colors.white, fontSize: 18.0, fontFamily: "SignikaRegular"),
                 ),
                 onPressed: () {},
@@ -170,7 +170,7 @@ class LoginState extends State<LoginWidget> {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 42.0),
                   child: Text(
-                    "Sign Up",
+                    "Зареєструватися",
                     style: TextStyle(fontFamily: "SignikaSemiBold", color: Colors.black, fontSize: 22.0),
                   ),
                 ),
