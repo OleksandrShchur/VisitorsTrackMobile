@@ -13,7 +13,7 @@ class HomeState extends State<HomeWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Contacts'),
+          title: Text('Головна'),
         ),
         drawer: Drawer(
           child: ListView(
