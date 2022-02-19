@@ -22,22 +22,25 @@ class HomeState extends State<HomeWidget> {
             ListTile(
                 title: Text("Меню 2"),
                 trailing: Icon(Icons.arrow_downward),
-                onTap: () => AlertDialog(
-                      title: Text('Reset settings?'),
-                      content: Text('This will reset your device to its default factory settings.'),
-                      actions: [
-                        FlatButton(
-                          textColor: Color(0xFF6200EE),
-                          onPressed: () {},
-                          child: Text('CANCEL'),
-                        ),
-                        FlatButton(
-                          textColor: Color(0xFF6200EE),
-                          onPressed: () {},
-                          child: Text('ACCEPT'),
-                        ),
-                      ],
-                    )),
+                onTap: () {
+                  AlertDialog(
+                    title: Text('Reset settings?'),
+                    content: Text('This will reset your device to its default factory settings.'),
+                    actions: [
+                      FlatButton(
+                        textColor: Color(0xFF6200EE),
+                        onPressed: () {},
+                        child: Text('CANCEL'),
+                      ),
+                      FlatButton(
+                        textColor: Color(0xFF6200EE),
+                        onPressed: () {},
+                        child: Text('ACCEPT'),
+                      ),
+                    ],
+                  );
+                  Navigator.pop(context);
+                })
           ],
         ),
       ),
