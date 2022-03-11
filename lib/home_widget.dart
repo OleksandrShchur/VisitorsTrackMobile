@@ -35,6 +35,15 @@ class HomeState extends State<HomeWidget> {
                 title: const Text('Вийти'),
                 onTap: () {
                   Navigator.pop(context);
+                  AlertDialog alert = AlertDialog(
+                    title: Text('Hi'),
+                  );
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return alert;
+                    },
+                  );
                   AlertDialog(
                     title: Text('Reset settings?'),
                     content: Text('This will reset your device to its default factory settings.'),
