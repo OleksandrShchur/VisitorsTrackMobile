@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:helloworld/theme.dart';
 
+import 'https://flutlab.io/root/app/lib/logout_widget.dart';
+
 class HomeWidget extends StatefulWidget {
   @override
   HomeState createState() {
@@ -34,23 +36,8 @@ class HomeState extends State<HomeWidget> {
               ListTile(
                 title: const Text('Вийти'),
                 onTap: () {
-                  AlertDialog(
-                    title: Text('Reset settings?'),
-                    content: Text('This will reset your device to its default factory settings.'),
-                    actions: [
-                      FlatButton(
-                        textColor: Color(0xFF6200EE),
-                        onPressed: () {},
-                        child: Text('CANCEL'),
-                      ),
-                      FlatButton(
-                        textColor: Color(0xFF6200EE),
-                        onPressed: () {},
-                        child: Text('ACCEPT'),
-                      ),
-                    ],
-                  );
                   Navigator.pop(context);
+                  LogoutWidget();
                 },
               ),
             ],
