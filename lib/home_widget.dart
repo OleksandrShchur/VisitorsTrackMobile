@@ -41,12 +41,16 @@ class HomeState extends State<HomeWidget> {
                     actions: [
                       FlatButton(
                         textColor: Color(0xFF4D65FF),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
                         child: Text('Залишитися'),
                       ),
                       FlatButton(
                         textColor: Color(0xFFFF4D4D),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
                         child: Text('Вийти'),
                       ),
                     ],
