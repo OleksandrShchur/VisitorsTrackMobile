@@ -36,18 +36,18 @@ class HomeState extends State<HomeWidget> {
                 onTap: () {
                   Navigator.pop(context);
                   AlertDialog alert = AlertDialog(
-                    title: Text('Reset settings?'),
-                    content: Text('This will reset your device to its default factory settings.'),
+                    title: Text('Хочете вийти із застосунку?'),
+                    content: Text('Для входу буде потрібна повторна авторизація.'),
                     actions: [
                       FlatButton(
-                        textColor: Color(0xFF6200EE),
+                        textColor: Color(0xFF4D65FF),
                         onPressed: () {},
-                        child: Text('CANCEL'),
+                        child: Text('Залишитися'),
                       ),
                       FlatButton(
-                        textColor: Color(0xFF6200EE),
+                        textColor: Color(0xFFFF4D4D),
                         onPressed: () {},
-                        child: Text('ACCEPT'),
+                        child: Text('Вийти'),
                       ),
                     ],
                   );
