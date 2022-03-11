@@ -36,15 +36,6 @@ class HomeState extends State<HomeWidget> {
                 onTap: () {
                   Navigator.pop(context);
                   AlertDialog alert = AlertDialog(
-                    title: Text('Hi'),
-                  );
-                  showDialog(
-                    context: context,
-                    builder: (BuildContext context) {
-                      return alert;
-                    },
-                  );
-                  AlertDialog(
                     title: Text('Reset settings?'),
                     content: Text('This will reset your device to its default factory settings.'),
                     actions: [
@@ -59,6 +50,12 @@ class HomeState extends State<HomeWidget> {
                         child: Text('ACCEPT'),
                       ),
                     ],
+                  );
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return alert;
+                    },
                   );
                 },
               ),
