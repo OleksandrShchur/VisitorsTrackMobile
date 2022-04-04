@@ -32,6 +32,36 @@ class HomeState extends State<HomeWidget> {
                 },
               ),
               ListTile(
+                title: const Text('Розклад'),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                title: const Text('Корисна інформація'),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                title: const Text('Повідомити про помилку'),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                title: const Text('Моя група'),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                title: const Text('Корисна інформація'),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
                 title: const Text('Вийти'),
                 onTap: () {
                   Navigator.pop(context);
