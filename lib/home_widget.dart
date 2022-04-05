@@ -38,36 +38,60 @@ class HomeState extends State<HomeWidget> {
                 },
               ),
               ListTile(
+                leading: Icon(
+                  Icons.schedule_rounded,
+                  color: Colors.blueGrey,
+                  size: 24.0,
+                  semanticLabel: 'Розклад',
+                ),
                 title: const Text('Розклад'),
                 onTap: () {
                   Navigator.pop(context);
                 },
               ),
               ListTile(
+                leading: Icon(
+                  Icons.info_rounded,
+                  color: Colors.blueGrey,
+                  size: 24.0,
+                  semanticLabel: 'Мій профіль',
+                ),
                 title: const Text('Корисна інформація'),
                 onTap: () {
                   Navigator.pop(context);
                 },
               ),
               ListTile(
+                leading: Icon(
+                  Icons.supervised_user_circle_rounded,
+                  color: Colors.blueGrey,
+                  size: 24.0,
+                  semanticLabel: 'Мій профіль',
+                ),
                 title: const Text('Моя група'),
                 onTap: () {
                   Navigator.pop(context);
                 },
               ),
               ListTile(
-                title: const Text('Корисна інформація'),
-                onTap: () {
-                  Navigator.pop(context);
-                },
-              ),
-              ListTile(
+                leading: Icon(
+                  Icons.error_rounded,
+                  color: Colors.red[100],
+                  size: 24.0,
+                  semanticLabel: 'Мій профіль',
+                ),
                 title: const Text('Повідомити про помилку'),
                 onTap: () {
                   Navigator.pop(context);
                 },
               ),
               ListTile(
+                leading: Icon(
+                  Icons.exit_to_app_rounded,
+                  color: Colors.black,
+                  size: 24.0,
+                  semanticLabel: 'Мій профіль',
+                ),
                 title: const Text('Вийти'),
                 onTap: () {
                   Navigator.pop(context);
