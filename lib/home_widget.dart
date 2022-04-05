@@ -27,7 +27,7 @@ class HomeState extends State<HomeWidget> {
               ),
               ListTile(
                 leading: Icon(
-                  Icons.user - circle,
+                  Icons.verified_user_rounded,
                   color: Colors.pink,
                   size: 24.0,
                   semanticLabel: 'Мій профіль',
