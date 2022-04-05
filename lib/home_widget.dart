@@ -27,10 +27,10 @@ class HomeState extends State<HomeWidget> {
               ),
               ListTile(
                 leading: Icon(
-                  Icons.favorite,
+                  Icons.user - circle,
                   color: Colors.pink,
                   size: 24.0,
-                  semanticLabel: 'Text to announce in accessibility modes',
+                  semanticLabel: 'Мій профіль',
                 ),
                 title: const Text('Мій профіль'),
                 onTap: () {
