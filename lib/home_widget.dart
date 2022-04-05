@@ -21,14 +21,14 @@ class HomeState extends State<HomeWidget> {
             children: [
               const DrawerHeader(
                 decoration: BoxDecoration(
-                  color: Colors.blue,
+                  color: Colors.blue[200],
                 ),
                 child: Text('Меню'),
               ),
               ListTile(
                 leading: Icon(
                   Icons.account_circle_rounded,
-                  color: Colors.blueGrey,
+                  color: Colors.black,
                   size: 24.0,
                   semanticLabel: 'Мій профіль',
                 ),
@@ -40,7 +40,7 @@ class HomeState extends State<HomeWidget> {
               ListTile(
                 leading: Icon(
                   Icons.schedule_rounded,
-                  color: Colors.blueGrey,
+                  color: Colors.black,
                   size: 24.0,
                   semanticLabel: 'Розклад',
                 ),
@@ -52,7 +52,7 @@ class HomeState extends State<HomeWidget> {
               ListTile(
                 leading: Icon(
                   Icons.info_rounded,
-                  color: Colors.blueGrey,
+                  color: Colors.black,
                   size: 24.0,
                   semanticLabel: 'Мій профіль',
                 ),
@@ -64,7 +64,7 @@ class HomeState extends State<HomeWidget> {
               ListTile(
                 leading: Icon(
                   Icons.supervised_user_circle_rounded,
-                  color: Colors.blueGrey,
+                  color: Colors.black,
                   size: 24.0,
                   semanticLabel: 'Мій профіль',
                 ),
@@ -76,7 +76,7 @@ class HomeState extends State<HomeWidget> {
               ListTile(
                 leading: Icon(
                   Icons.error_rounded,
-                  color: Colors.red[100],
+                  color: Colors.black,
                   size: 24.0,
                   semanticLabel: 'Мій профіль',
                 ),
