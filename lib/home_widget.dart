@@ -54,7 +54,7 @@ class HomeState extends State<HomeWidget> {
                   Icons.info_rounded,
                   color: Colors.black,
                   size: 24.0,
-                  semanticLabel: 'Мій профіль',
+                  semanticLabel: 'Корисна інформація',
                 ),
                 title: const Text('Корисна інформація'),
                 onTap: () {
@@ -66,7 +66,7 @@ class HomeState extends State<HomeWidget> {
                   Icons.supervised_user_circle_rounded,
                   color: Colors.black,
                   size: 24.0,
-                  semanticLabel: 'Мій профіль',
+                  semanticLabel: 'Моя група',
                 ),
                 title: const Text('Моя група'),
                 onTap: () {
@@ -75,10 +75,10 @@ class HomeState extends State<HomeWidget> {
               ),
               ListTile(
                 leading: Icon(
-                  Icons.error_rounded,
+                  Icons.warning_sharp,
                   color: Colors.black,
                   size: 24.0,
-                  semanticLabel: 'Мій профіль',
+                  semanticLabel: 'Повідомити про помилку',
                 ),
                 title: const Text('Повідомити про помилку'),
                 onTap: () {
