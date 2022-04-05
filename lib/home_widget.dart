@@ -26,6 +26,12 @@ class HomeState extends State<HomeWidget> {
                 child: Text('Меню'),
               ),
               ListTile(
+                leading: Icon(
+                  Icons.favorite,
+                  color: Colors.pink,
+                  size: 24.0,
+                  semanticLabel: 'Text to announce in accessibility modes',
+                ),
                 title: const Text('Мій профіль'),
                 onTap: () {
                   Navigator.pop(context);
