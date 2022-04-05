@@ -21,7 +21,7 @@ class HomeState extends State<HomeWidget> {
             children: [
               const DrawerHeader(
                 decoration: BoxDecoration(
-                  color: Colors.blue[200],
+                  color: Colors.blue,
                 ),
                 child: Text('Меню'),
               ),
