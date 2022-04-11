@@ -3,9 +3,9 @@ import 'package:table_calendar/table_calendar.dart';
 
 import 'package:helloworld/utils.dart';
 
-class TableEventsExample extends StatefulWidget {
+class Schedule extends StatefulWidget {
   @override
-  _TableEventsExampleState createState() => _TableEventsExampleState();
+  _ScheduleState createState() => _State();
 }
 
 class _TableEventsExampleState extends State<TableEventsExample> {
