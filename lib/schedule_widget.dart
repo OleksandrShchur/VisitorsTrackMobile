@@ -5,10 +5,10 @@ import 'package:helloworld/utils.dart';
 
 class Schedule extends StatefulWidget {
   @override
-  _ScheduleState createState() => _State();
+  _ScheduleState createState() => _ScheduleState();
 }
 
-class _TableEventsExampleState extends State<TableEventsExample> {
+class _ScheduleState extends State<Schedule> {
   //late final ValueNotifier<List<Event>> _selectedEvents;
   CalendarFormat _calendarFormat = CalendarFormat.month;
   RangeSelectionMode _rangeSelectionMode = RangeSelectionMode.toggledOff; // Can be toggled on/off by longpressing a date
