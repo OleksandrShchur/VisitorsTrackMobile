@@ -108,7 +108,6 @@ class HomeState extends State<HomeWidget> {
             ),
             title: const Text('Вийти'),
             onTap: () {
-              Navigator.pop(context);
               AlertDialog alert = AlertDialog(
                 title: Text('Хочете вийти із застосунку?'),
                 content: Text('Для входу буде потрібна повторна авторизація.'),
@@ -116,14 +115,14 @@ class HomeState extends State<HomeWidget> {
                   FlatButton(
                     textColor: Color(0xFF4D65FF),
                     onPressed: () {
-                      Navigator.pop(context);
+                      Navigator.of(context).pop();
                     },
                     child: Text('Залишитися'),
                   ),
                   FlatButton(
                     textColor: Color(0xFFFF4D4D),
                     onPressed: () {
-                      Navigator.pop(context);
+                      Navigator.of(context).pop();
                     },
                     child: Text('Вийти'),
                   ),
