@@ -9,25 +9,25 @@ class TableEventsExample extends StatefulWidget {
 }
 
 class _TableEventsExampleState extends State<TableEventsExample> {
-  late final ValueNotifier<List<Event>> _selectedEvents;
+  //late final ValueNotifier<List<Event>> _selectedEvents;
   CalendarFormat _calendarFormat = CalendarFormat.month;
   RangeSelectionMode _rangeSelectionMode = RangeSelectionMode.toggledOff; // Can be toggled on/off by longpressing a date
   DateTime _focusedDay = DateTime.now();
-  DateTime? _selectedDay;
-  DateTime? _rangeStart;
-  DateTime? _rangeEnd;
+  DateTime _selectedDay;
+  DateTime _rangeStart;
+  DateTime _rangeEnd;
 
   @override
   void initState() {
     super.initState();
 
     _selectedDay = _focusedDay;
-    _selectedEvents = ValueNotifier(_getEventsForDay(_selectedDay!));
+    //_selectedEvents = ValueNotifier(_getEventsForDay(_selectedDay));
   }
 
   @override
   void dispose() {
-    _selectedEvents.dispose();
+    //_selectedEvents.dispose();
     super.dispose();
   }
 
@@ -55,11 +55,11 @@ class _TableEventsExampleState extends State<TableEventsExample> {
         _rangeSelectionMode = RangeSelectionMode.toggledOff;
       });
 
-      _selectedEvents.value = _getEventsForDay(selectedDay);
+      //_selectedEvents.value = _getEventsForDay(selectedDay);
     }
   }
 
-  void _onRangeSelected(DateTime? start, DateTime? end, DateTime focusedDay) {
+  void _onRangeSelected(DateTime start, DateTime end, DateTime focusedDay) {
     setState(() {
       _selectedDay = null;
       _focusedDay = focusedDay;
@@ -69,13 +69,13 @@ class _TableEventsExampleState extends State<TableEventsExample> {
     });
 
     // `start` or `end` could be null
-    if (start != null && end != null) {
+    /*if (start != null && end != null) {
       _selectedEvents.value = _getEventsForRange(start, end);
     } else if (start != null) {
       _selectedEvents.value = _getEventsForDay(start);
     } else if (end != null) {
       _selectedEvents.value = _getEventsForDay(end);
-    }
+    }*/
   }
 
   @override
@@ -117,7 +117,7 @@ class _TableEventsExampleState extends State<TableEventsExample> {
           const SizedBox(height: 8.0),
           Expanded(
             child: ValueListenableBuilder<List<Event>>(
-              valueListenable: _selectedEvents,
+              //valueListenable: _selectedEvents,
               builder: (context, value, _) {
                 return ListView.builder(
                   itemCount: value.length,
