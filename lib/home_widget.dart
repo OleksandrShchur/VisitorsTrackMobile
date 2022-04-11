@@ -48,7 +48,7 @@ class HomeState extends State<HomeWidget> {
                 ),
                 title: const Text('Розклад'),
                 onTap: () {
-                  Navigator.pop(context);
+                  //Navigator.pop(context);
                   MaterialPageRoute(builder: (context) => ScheduleTable());
                 },
               ),
