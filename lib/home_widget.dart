@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:helloworld/theme.dart';
 import 'package:helloworld/schedule_widget.dart';
+import 'package:helloworld/table_calendar.dart';
 
 class HomeWidget extends StatefulWidget {
   @override
@@ -48,7 +49,7 @@ class HomeState extends State<HomeWidget> {
                 title: const Text('Розклад'),
                 onTap: () {
                   Navigator.pop(context);
-                  MaterialPageRoute(builder: (_) => Schedule());
+                  MaterialPageRoute(builder: (_) => ScheduleTable());
                 },
               ),
               ListTile(

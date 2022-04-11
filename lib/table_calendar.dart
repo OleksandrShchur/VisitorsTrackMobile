@@ -1,1 +1,45 @@
+import 'package:flutter/material.dart';
+import 'package:table_calendar/table_calendar.dart';
 
+class ScheduleTable extends StatefulWidget {
+  @override
+  _ScheduleTableState createState() => _ScheduleTableState();
+}
+
+class _ScheduleTableState extends State<ScheduleTable> {
+  DateTime _focusedDay = DateTime.now();
+  DateTime _selectedDay;
+  DateTime _rangeStart;
+  DateTime _rangeEnd;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _selectedDay = _focusedDay;
+  }
+
+  @override
+  void dispose() {
+    //_selectedEvents.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Розклад'),
+      ),
+      body: Column(
+        children: [
+          TableCalendar(
+            firstDay: DateTime.utc(2010, 10, 16),
+            lastDay: DateTime.utc(2030, 3, 14),
+            focusedDay: DateTime.now(),
+          ),
+        ],
+      ),
+    );
+  }
+}
