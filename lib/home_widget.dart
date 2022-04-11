@@ -77,6 +77,18 @@ class HomeState extends State<HomeWidget> {
               ),
               ListTile(
                 leading: Icon(
+                  Icons.wifi_protected_setup_rounded,
+                  color: Colors.black,
+                  size: 24.0,
+                  semanticLabel: 'Безпека',
+                ),
+                title: const Text('Безпека'),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                leading: Icon(
                   Icons.warning_sharp,
                   color: Colors.black,
                   size: 24.0,
