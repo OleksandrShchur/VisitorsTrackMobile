@@ -82,11 +82,11 @@ class _ScheduleState extends State<Schedule> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('TableCalendar - Events'),
+        title: Text('Розклад'),
       ),
       body: Column(
         children: [
-          TableCalendar<Event>(
+          TableCalendar(
             firstDay: kFirstDay,
             lastDay: kLastDay,
             focusedDay: _focusedDay,
