@@ -49,7 +49,7 @@ class HomeState extends State<HomeWidget> {
                 title: const Text('Розклад'),
                 onTap: () {
                   Navigator.pop(context);
-                  MaterialPageRoute(builder: (_) => ScheduleTable());
+                  MaterialPageRoute(builder: (context) => ScheduleTable());
                 },
               ),
               ListTile(
