@@ -118,7 +118,7 @@ class LoginState extends State<LoginWidget> {
                               ),
                             ),
                             onPressed: () {
-                              Navigator.pop(context, MaterialPageRoute(builder: (context) => HomeWidget()));
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => HomeWidget()));
                             },
                           ),
                         ),
