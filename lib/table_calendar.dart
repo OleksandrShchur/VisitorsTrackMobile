@@ -51,7 +51,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
             onPageChanged: (focusedDay) {
               _focusedDay = focusedDay;
             },
-            locale: 'uk_UK',
+            //locale: 'uk_UK',
           ),
         ],
       ),
