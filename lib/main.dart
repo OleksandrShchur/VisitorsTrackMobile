@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:helloworld/login_widget.dart';
 import 'package:intl/date_symbol_data_local.dart';
 
-void main() => initializeDateFormatting().then((_) => runApp(MyApp())));
+void main() => initializeDateFormatting().then((_) => runApp(MyApp()));
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
