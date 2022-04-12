@@ -23,7 +23,6 @@ class LoginState extends State<LoginWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      firstDayOfWeek: 3,
       backgroundColor: Colors.black54,
       key: _mainScaffoldKey,
       body: Container(
