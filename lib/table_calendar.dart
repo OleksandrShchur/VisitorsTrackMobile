@@ -52,6 +52,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
               _focusedDay = focusedDay;
             },
             locale: 'uk_UK',
+            firstDayOfWeek: 1,
           ),
         ],
       ),

@@ -16,7 +16,6 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.deepPurple,
       ),
       home: LoginWidget(),
-      firstDayOfWeek: 3,
     );
   }
 }
