@@ -20,8 +20,7 @@ class HomeState extends State<HomeWidget> {
         padding: EdgeInsets.zero,
         children: [
           const DrawerHeader(
-            backgroundImage: BoxDecoration(color: Colors.blue, image: DecorationImage(image: AssetImage("lib/assets/chnu.jpg"), fit: BoxFit.cover)),
-            //decoration: BoxDecoration(color: Colors.blue, image: DecorationImage(image: AssetImage("lib/assets/chnu.jpg"), fit: BoxFit.cover)),
+            decoration: BoxDecoration(color: Colors.blue, image: DecorationImage(image: NetworkImage('https://i2.wp.com/vidviday.ua/blog/wp-content/uploads/2016/01/Attachment-1-23.jpeg?fit=1200%2C408&ssl=1'))),
             //child: Text('Меню'),
           ),
           ListTile(
