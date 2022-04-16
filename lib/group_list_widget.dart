@@ -10,16 +10,33 @@ class _GroupListState extends State<GroupList> {
   List groupMembers;
 
   @override
+  void initState() {
+    super.initState();
+
+    groupMembers = [
+      'user1',
+      'user2',
+      'user3',
+      'user4'
+    ];
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return ListView.builder(
       itemBuilder: (context, index) {
         return ListTile(
-          title: Text('Item $index'),
+          title: Text(groupMembers[index]),
           subtitle: Text('subtitle'),
           leading: Icon(Icons.supervised_user_circle),
         );
       },
-      itemCount: 20,
+      itemCount: groupMembers.length,
     );
   }
 }
