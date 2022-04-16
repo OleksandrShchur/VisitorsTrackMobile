@@ -7,6 +7,12 @@ class GroupList extends StatefulWidget {
   _GroupListState createState() => _GroupListState();
 }
 
+class GroupMember {
+  String fullname, group, photourl;
+
+  GroupMember(this.fullname, this.group, this.photourl);
+}
+
 class _GroupListState extends State<GroupList> {
   List<GroupMember> groupMembers;
 
