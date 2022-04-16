@@ -15,9 +15,9 @@ class _GroupListState extends State<GroupList> {
     super.initState();
 
     groupMembers = [
-      GroupMember('Щур Олександр Іванович', '401б', ''),
-      GroupMember('Мадей Андрій Олександрович', '401а', ''),
-      GroupMember('Роєк Анастасія Іванівна', '401б', '')
+      new GroupMember('Щур Олександр Іванович', '401б', ''),
+      new GroupMember('Мадей Андрій Олександрович', '401а', ''),
+      new GroupMember('Роєк Анастасія Іванівна', '401б', '')
     ];
   }
 
