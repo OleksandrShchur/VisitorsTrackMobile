@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:helloworld/theme.dart';
+import 'package:helloworld/models/group-member-model.dart';
 
 class GroupList extends StatefulWidget {
   @override
@@ -14,10 +15,9 @@ class _GroupListState extends State<GroupList> {
     super.initState();
 
     groupMembers = [
-      'user1',
-      'user2',
-      'user3',
-      'user4'
+      User('Щур Олександр Іванович', '401б', ''),
+      User('Мадей Андрій Олександрович', '401а', ''),
+      User('Роєк Анастасія Іванівна', '401б', '')
     ];
   }
 
@@ -31,8 +31,8 @@ class _GroupListState extends State<GroupList> {
     return ListView.builder(
       itemBuilder: (context, index) {
         return ListTile(
-          title: Text(groupMembers[index]),
-          subtitle: Text('subtitle'),
+          title: Text(groupMembers[index].fullname),
+          subtitle: Text(groupMember[index].group),
           leading: Icon(Icons.supervised_user_circle),
         );
       },
