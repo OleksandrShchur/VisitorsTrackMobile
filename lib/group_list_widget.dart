@@ -8,7 +8,7 @@ class GroupList extends StatefulWidget {
 }
 
 class _GroupListState extends State<GroupList> {
-  List groupMembers;
+  List<GroupMember> groupMembers;
 
   @override
   void initState() {
