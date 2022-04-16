@@ -70,6 +70,7 @@ class HomeState extends State<HomeWidget> {
             title: const Text('Моя група'),
             onTap: () {
               Navigator.pop(context);
+              Navigator.push(context, MaterialPageRoute(builder: (context) => GroupList()));
             },
           ),
           ListTile(
