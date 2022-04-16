@@ -1,5 +1,5 @@
 class GroupMember {
   String fullname, group, photourl;
-  
-  User(this.fullname, this.group, this.photourl);
+
+  GroupMember(this.fullname, this.group, this.photourl);
 }
