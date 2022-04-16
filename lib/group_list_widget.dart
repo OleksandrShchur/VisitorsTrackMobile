@@ -32,8 +32,8 @@ class _GroupListState extends State<GroupList> {
       itemBuilder: (context, index) {
         return ListTile(
           title: Text(groupMembers[index].fullname),
-          subtitle: Text(groupMember[index].group),
-          leading: Icon(Icons.supervised_user_circle),
+          subtitle: Text(groupMembers[index].group),
+          leading: Icon(Icons.supervised_user_circle, size: 12),
         );
       },
       itemCount: groupMembers.length,
