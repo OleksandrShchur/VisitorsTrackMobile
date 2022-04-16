@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:helloworld/theme.dart';
 import 'package:helloworld/table_calendar.dart';
+import 'package:helloworld/group_widget.dart';
 
 class HomeWidget extends StatefulWidget {
   @override
@@ -69,8 +70,8 @@ class HomeState extends State<HomeWidget> {
             ),
             title: const Text('Моя група'),
             onTap: () {
-              Navigator.pop(context);
-              Navigator.push(context, MaterialPageRoute(builder: (context) => GroupList()));
+              //Navigator.pop(context);
+              Navigator.push(context, MaterialPageRoute(builder: (context) => GroupTable()));
             },
           ),
           ListTile(
