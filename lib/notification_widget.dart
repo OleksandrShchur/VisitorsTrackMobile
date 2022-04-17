@@ -80,7 +80,7 @@ class ListItemWidget extends State<SwipeList> {
                   Expanded(
                     child: Container(
                       padding: EdgeInsets.all(2),
-                      height: 120,
+                      height: 150,
                       child: Padding(
                         padding: EdgeInsets.fromLTRB(10, 2, 0, 0),
                         child: Column(
