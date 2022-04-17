@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:helloworld/theme.dart';
 import 'package:helloworld/table_calendar.dart';
 import 'package:helloworld/group_widget.dart';
+import 'package:helloworld/notification_widget.dart';
 
 class HomeWidget extends StatefulWidget {
   @override
@@ -51,18 +52,6 @@ class HomeState extends State<HomeWidget> {
           ),
           ListTile(
             leading: Icon(
-              Icons.info_rounded,
-              color: Colors.black,
-              size: 24.0,
-              semanticLabel: 'Корисна інформація',
-            ),
-            title: const Text('Корисна інформація'),
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),
-          ListTile(
-            leading: Icon(
               Icons.supervised_user_circle_rounded,
               color: Colors.black,
               size: 24.0,
@@ -72,6 +61,19 @@ class HomeState extends State<HomeWidget> {
             onTap: () {
               //Navigator.pop(context);
               Navigator.push(context, MaterialPageRoute(builder: (context) => GroupTable()));
+            },
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.info_rounded,
+              color: Colors.black,
+              size: 24.0,
+              semanticLabel: 'Сповіщення',
+            ),
+            title: const Text('Сповіщення'),
+            onTap: () {
+              //Navigator.pop(context);
+              Navigator.push(context, MaterialPageRoute(builder: (context) => NotificationList()));
             },
           ),
           ListTile(
