@@ -23,7 +23,11 @@ class _GroupTableState extends State<GroupTable> {
       appBar: AppBar(
         title: Text('Список групи'),
       ),
-      body: GroupList(),
+      body: Column(
+        children: [
+          GroupList(),
+        ],
+      ),
     );
   }
 }
