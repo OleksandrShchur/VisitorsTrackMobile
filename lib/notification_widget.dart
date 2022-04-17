@@ -19,6 +19,13 @@ class SwipeList extends StatefulWidget {
   }
 }
 
+class Notification {
+  String title, shortDesc;
+  String roles;
+
+  Notification(this.title, this.shortDesc, this.roles);
+}
+
 class ListItemWidget extends State<SwipeList> {
   List<Notification> items;
 
@@ -43,7 +50,7 @@ class ListItemWidget extends State<SwipeList> {
       itemCount: items.length,
       itemBuilder: (context, index) {
         return Dismissible(
-          key: Key(items[index]),
+          key: Key(items[index].title),
           background: Container(
             alignment: AlignmentDirectional.centerEnd,
             color: Colors.red,
@@ -77,7 +84,7 @@ class ListItemWidget extends State<SwipeList> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Text(
-                            items[index],
+                            items[index].title,
                           ),
                           Padding(
                             padding: EdgeInsets.fromLTRB(0, 3, 0, 3),
@@ -85,7 +92,7 @@ class ListItemWidget extends State<SwipeList> {
                               width: 30,
                               decoration: BoxDecoration(border: Border.all(color: Colors.teal), borderRadius: BorderRadius.all(Radius.circular(10))),
                               child: Text(
-                                "3D",
+                                items[index].roles,
                                 textAlign: TextAlign.center,
                               ),
                             ),
@@ -95,7 +102,7 @@ class ListItemWidget extends State<SwipeList> {
                             child: Container(
                               width: 260,
                               child: Text(
-                                "His genius finally recognized by his idol Chester",
+                                items[index].shortDesc,
                                 style: TextStyle(fontSize: 15, color: Color.fromARGB(255, 48, 48, 54)),
                               ),
                             ),
@@ -111,12 +118,5 @@ class ListItemWidget extends State<SwipeList> {
         );
       },
     ));
-  }
-
-  static List getDummyList() {
-    List list = List.generate(10, (i) {
-      return "Item ${i + 1}";
-    });
-    return list;
   }
 }
