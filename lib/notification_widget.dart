@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:helloworld/models/notification_model.dart';
 
 class NotificationList extends StatelessWidget {
   @override
@@ -19,7 +20,21 @@ class SwipeList extends StatefulWidget {
 }
 
 class ListItemWidget extends State<SwipeList> {
-  List items = getDummyList();
+  List<Notification> items;
+
+  @override
+  void initState() {
+    super.initState();
+
+    items = [
+      new Notification("Вчена рада 15.04.2022", "Вчену раду факультету математики та інформатики буде проведено 15 квітня об 14.40.", "Вчена рада"),
+    ];
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
