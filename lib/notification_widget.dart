@@ -52,7 +52,7 @@ class ListItemWidget extends State<SwipeList> {
                   Container(
                     height: 100.0,
                     width: 70.0,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.only(bottomLeft: Radius.circular(5), topLeft: Radius.circular(5)), image: DecorationImage(fit: BoxFit.cover, image: NetworkImage("https://e7.pngegg.com/pngimages/1022/907/png-clipart-yellow-and-black-warning-sign-icon-warning-icons-angle-triangle.png"))),
+                    decoration: BoxDecoration(borderRadius: BorderRadius.only(bottomLeft: Radius.circular(5), topLeft: Radius.circular(5)), image: DecorationImage(fit: BoxFit.contain, image: NetworkImage("https://e7.pngegg.com/pngimages/1022/907/png-clipart-yellow-and-black-warning-sign-icon-warning-icons-angle-triangle.png"))),
                   ),
                   Container(
                     height: 100,
