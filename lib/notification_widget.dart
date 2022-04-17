@@ -8,9 +8,8 @@ class NotificationList extends StatelessWidget {
         appBar: AppBar(
           title: Text("Сповіщення"),
         ),
+        floatingActionButton: FloatingActionButton(onPressed: () => {}, tooltip: 'Додати сповіщення', child: const Icon(Icons.add)),
         body: Center(child: SwipeList()));
-    floatingActionButton:
-    FloatingActionButton(onPressed: () => {}, tooltip: 'Додати сповіщення', child: const Icon(Icons.add));
   }
 }
 
