@@ -91,7 +91,8 @@ class ListItemWidget extends State<SwipeList> {
                             child: Expanded(
                               child: Container(
                                 //width: 30,
-                                decoration: BoxDecoration(border: Border.all(color: Colors.teal), borderRadius: BorderRadius.all(Radius.circular(10))),
+                                padding: 5,
+                                decoration: BoxDecoration(border: Border.all(color: Colors.teal), borderRadius: BorderRadius.all(Radius.circular(5))),
                                 child: Text(
                                   items[index].roles,
                                   textAlign: TextAlign.center,
