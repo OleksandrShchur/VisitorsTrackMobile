@@ -7,12 +7,6 @@ class GroupList extends StatefulWidget {
   _GroupListState createState() => _GroupListState();
 }
 
-// class GroupMember {
-//   String fullname, group, photourl;
-
-//   GroupMember(this.fullname, this.group, this.photourl);
-// }
-
 class _GroupListState extends State<GroupList> {
   List<GroupMember> groupMembers;
 
@@ -39,7 +33,7 @@ class _GroupListState extends State<GroupList> {
         return ListTile(
           title: Text(groupMembers[index].fullname),
           subtitle: Text(groupMembers[index].group),
-          leading: Icon(Icons.user, size: 48),
+          leading: Icon(Icons.account_circle_rounded, size: 48),
         );
       },
       itemCount: groupMembers.length,
