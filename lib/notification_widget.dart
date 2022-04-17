@@ -22,8 +22,11 @@ class SwipeList extends StatefulWidget {
 class Notification {
   String title, shortDesc;
   String roles;
+  String author;
+  DateTime dateOfPublishing;
+  String detailedDesc;
 
-  Notification(this.title, this.shortDesc, this.roles);
+  Notification(this.title, this.shortDesc, this.roles, this.author, this.dateOfPublishing, this.detailedDesc);
 }
 
 class ListItemWidget extends State<SwipeList> {
@@ -34,9 +37,9 @@ class ListItemWidget extends State<SwipeList> {
     super.initState();
 
     items = [
-      new Notification("Вчена рада 15.04.2022", "Вчену раду ФМІ буде проведено 15 квітня об 14.40.", "Вчена рада"),
-      new Notification("День відкритих дверей", "04.04.2022 буде проведено день відкритих дверей ФМІ.", "Викладачі, студенти"),
-      new Notification("Вибори голови студпарламенту", "02.25.2022 будуть проводитися вибори голови студпарламенту ФМІ", "Студенти"),
+      new Notification("Вчена рада 15.04.2022", "Вчену раду ФМІ буде проведено 15 квітня об 14.40.", "Вчена рада", "", DateTime(4, 4, 2022), ''),
+      new Notification("День відкритих дверей", "04.04.2022 буде проведено день відкритих дверей ФМІ.", "Викладачі, студенти", "", DateTime(30, 3, 2022), ''),
+      new Notification("Вибори голови студпарламенту", "02.02.2022 будуть проводитися вибори голови студпарламенту ФМІ", "Студенти", 'Бурденюк Ігор Олександрович', DateTime(20, 1, 2022), ''),
     ];
   }
 
@@ -89,6 +92,7 @@ class ListItemWidget extends State<SwipeList> {
                           children: <Widget>[
                             Text(
                               items[index].title,
+                              style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                             Padding(
                               padding: EdgeInsets.fromLTRB(0, 3, 0, 3),
