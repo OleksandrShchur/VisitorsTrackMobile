@@ -95,6 +95,16 @@ class ListItemWidget extends State<SwipeList> {
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                             Padding(
+                              padding: EdgeInsets.fromLTRB(0, 5, 0, 2),
+                              child: Container(
+                                width: 260,
+                                child: Text(
+                                  items[index].shortDesc,
+                                  style: TextStyle(fontSize: 15, color: Color.fromARGB(255, 48, 48, 54)),
+                                ),
+                              ),
+                            ),
+                            Padding(
                               padding: EdgeInsets.fromLTRB(0, 3, 0, 3),
                               child: Expanded(
                                 child: Container(
@@ -107,16 +117,6 @@ class ListItemWidget extends State<SwipeList> {
                                 ),
                               ),
                             ),
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(0, 5, 0, 2),
-                              child: Container(
-                                width: 260,
-                                child: Text(
-                                  items[index].shortDesc,
-                                  style: TextStyle(fontSize: 15, color: Color.fromARGB(255, 48, 48, 54)),
-                                ),
-                              ),
-                            )
                           ],
                         ),
                       ),
