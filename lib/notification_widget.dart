@@ -76,40 +76,42 @@ class ListItemWidget extends State<SwipeList> {
                     width: 70.0,
                     decoration: BoxDecoration(borderRadius: BorderRadius.only(bottomLeft: Radius.circular(5), topLeft: Radius.circular(5)), image: DecorationImage(fit: BoxFit.contain, image: NetworkImage("https://images.assetsdelivery.com/compings_v2/sergt/sergt1606/sergt160600051.jpg"))),
                   ),
-                  Container(
-                    height: 100,
-                    child: Padding(
-                      padding: EdgeInsets.fromLTRB(10, 2, 0, 0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Text(
-                            items[index].title,
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(0, 3, 0, 3),
-                            child: Expanded(
-                              child: Container(
-                                //width: 30,
-                                decoration: BoxDecoration(border: Border.all(color: Colors.teal), borderRadius: BorderRadius.all(Radius.circular(5))),
-                                child: Text(
-                                  items[index].roles,
-                                  textAlign: TextAlign.center,
+                  Expanded(
+                    child: Container(
+                      height: 100,
+                      child: Padding(
+                        padding: EdgeInsets.fromLTRB(10, 2, 0, 0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text(
+                              items[index].title,
+                            ),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(0, 3, 0, 3),
+                              child: Expanded(
+                                child: Container(
+                                  //width: 30,
+                                  decoration: BoxDecoration(border: Border.all(color: Colors.teal), borderRadius: BorderRadius.all(Radius.circular(5))),
+                                  child: Text(
+                                    items[index].roles,
+                                    textAlign: TextAlign.center,
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(0, 5, 0, 2),
-                            child: Container(
-                              width: 260,
-                              child: Text(
-                                items[index].shortDesc,
-                                style: TextStyle(fontSize: 15, color: Color.fromARGB(255, 48, 48, 54)),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(0, 5, 0, 2),
+                              child: Container(
+                                width: 260,
+                                child: Text(
+                                  items[index].shortDesc,
+                                  style: TextStyle(fontSize: 15, color: Color.fromARGB(255, 48, 48, 54)),
+                                ),
                               ),
-                            ),
-                          )
-                        ],
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   )
