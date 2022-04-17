@@ -84,7 +84,7 @@ class ListItemWidget extends State<SwipeList> {
                     decoration: BoxDecoration(borderRadius: BorderRadius.only(bottomLeft: Radius.circular(5), topLeft: Radius.circular(5)), image: DecorationImage(fit: BoxFit.contain, image: NetworkImage("https://images.assetsdelivery.com/compings_v2/sergt/sergt1606/sergt160600051.jpg"))),
                   ),
                   Container(
-                    height: 100,
+                    height: 100.0,
                     child: Padding(
                       padding: EdgeInsets.fromLTRB(10, 2, 0, 0),
                       child: Column(
