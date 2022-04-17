@@ -88,12 +88,14 @@ class ListItemWidget extends State<SwipeList> {
                           ),
                           Padding(
                             padding: EdgeInsets.fromLTRB(0, 3, 0, 3),
-                            child: Container(
-                              width: 30,
-                              decoration: BoxDecoration(border: Border.all(color: Colors.teal), borderRadius: BorderRadius.all(Radius.circular(10))),
-                              child: Text(
-                                items[index].roles,
-                                textAlign: TextAlign.center,
+                            child: Expanded(
+                              child: Container(
+                                //width: 30,
+                                decoration: BoxDecoration(border: Border.all(color: Colors.teal), borderRadius: BorderRadius.all(Radius.circular(10))),
+                                child: Text(
+                                  items[index].roles,
+                                  textAlign: TextAlign.center,
+                                ),
                               ),
                             ),
                           ),
