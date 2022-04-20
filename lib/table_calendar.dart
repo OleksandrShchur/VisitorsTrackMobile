@@ -58,7 +58,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
             view: CalendarView.month,
             initialSelectedDate: DateTime.now(),
             monthViewSettings: MonthViewSettings(showAgenda: true, navigationDirection: MonthNavigationDirection.vertical, numberOfWeeksInView: 2, dayFormat: 'EEE'),
-            dataSource: _getDataSource(),
+            dataSource: MeetingDataSource(_getDataSource()),
           ),
         ],
       ),
