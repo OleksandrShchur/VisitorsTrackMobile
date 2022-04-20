@@ -35,7 +35,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
         title: Text('Розклад'),
       ),
       body: Column(
-        children: <Widget>[
+        children: [
           // TableCalendar(
           //   firstDay: DateTime.utc(2010, 10, 16),
           //   lastDay: DateTime.utc(2030, 3, 14),
