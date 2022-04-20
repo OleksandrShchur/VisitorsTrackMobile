@@ -56,7 +56,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
           // ),
           SfCalendar(
             view: CalendarView.month,
-            monthViewSettings: MonthViewSettings(showAgenda: true, agendaItemHeight: 200),
+            monthViewSettings: MonthViewSettings(showAgenda: true, agendaItemHeight: 300),
           ),
         ],
       ),
