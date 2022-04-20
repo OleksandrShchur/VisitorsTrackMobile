@@ -123,6 +123,7 @@ class HomeState extends State<HomeWidget> {
                   FlatButton(
                     textColor: Color(0xFFFF4D4D),
                     onPressed: () {
+                      Navigator.of(context).pop();
                       Navigator.pop(context);
                     },
                     child: Text('Вийти'),
