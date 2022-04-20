@@ -56,6 +56,9 @@ class _ScheduleTableState extends State<ScheduleTable> {
           // ),
           SfCalendar(
             view: CalendarView.month,
+            timeSlotViewSettings: TimeSlotViewSettings(
+              timeIntervalWidth: 200,
+            ),
             monthViewSettings: MonthViewSettings(showAgenda: true, navigationDirection: MonthNavigationDirection.vertical, numberOfWeeksInView: 2),
           ),
         ],
