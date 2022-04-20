@@ -57,7 +57,6 @@ class _ScheduleTableState extends State<ScheduleTable> {
           SfCalendar(
             view: CalendarView.month,
             monthViewSettings: MonthViewSettings(showAgenda: true),
-            locale: 'uk_UK',
           ),
         ],
       ),
