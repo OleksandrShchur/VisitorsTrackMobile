@@ -55,8 +55,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
           //   locale: 'uk_UK',
           // ),
           SfCalendar(
-            view: CalendarView.month,
-            headerHeight: 50,
+            view: CalendarView.week,
             monthViewSettings: MonthViewSettings(showAgenda: true, navigationDirection: MonthNavigationDirection.vertical, numberOfWeeksInView: 3),
           ),
         ],
