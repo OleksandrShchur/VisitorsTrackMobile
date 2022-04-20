@@ -57,7 +57,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
           SfCalendar(
             view: CalendarView.month,
             initialSelectedDate: DateTime.now(),
-            monthViewSettings: MonthViewSettings(showAgenda: true, navigationDirection: MonthNavigationDirection.vertical, numberOfWeeksInView: 2, dayFormat: 'EEE', agendaViewHeight: 200, agendaItemHeight: 100),
+            monthViewSettings: MonthViewSettings(showAgenda: true, navigationDirection: MonthNavigationDirection.vertical, numberOfWeeksInView: 2, dayFormat: 'EEE', agendaViewHeight: 200),
             dataSource: MeetingDataSource(_getDataSource()),
           ),
         ],
