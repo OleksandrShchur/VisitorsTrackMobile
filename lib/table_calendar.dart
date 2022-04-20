@@ -56,6 +56,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
           ),
           SfCalendar(
             view: CalendarView.day,
+            headerHeight: 0,
           ),
         ],
       ),
