@@ -57,7 +57,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
           SfCalendar(
             view: CalendarView.month,
             initialSelectedDate: DateTime.now(),
-            monthViewSettings: MonthViewSettings(showAgenda: true, navigationDirection: MonthNavigationDirection.vertical, numberOfWeeksInView: 2, dayFormat: 'EEE', agendaViewHeight: -200),
+            monthViewSettings: MonthViewSettings(showAgenda: true, navigationDirection: MonthNavigationDirection.vertical, numberOfWeeksInView: 2, dayFormat: 'EEE'),
             dataSource: MeetingDataSource(_getDataSource()),
           ),
         ],
@@ -72,9 +72,12 @@ List<Meeting> _getDataSource() {
   final DateTime startTime = DateTime(today.year, today.month, today.day, 9, 50, 0);
   final DateTime endTime = startTime.add(const Duration(hours: 1, minutes: 20));
   final DateTime startTime2 = DateTime(today.year, today.month, today.day, 11, 30, 0);
-  final DateTime endTime2 = startTime.add(const Duration(hours: 1, minutes: 20));
+  final DateTime endTime2 = startTime2.add(const Duration(hours: 1, minutes: 20));
+  final DateTime startTime3 = DateTime(today.year, today.month, today.day, 13, 00, 0);
+  final DateTime endTime3 = startTime3.add(const Duration(hours: 1, minutes: 20));
   meetings.add(Meeting('Аналіз даних (лекція)', startTime, endTime, const Color(0xFF0F8644), false));
-  meetings.add(Meeting('Аналіз даних (практика)', startTime2, endTime, const Color(0xFF3272d1), false));
+  meetings.add(Meeting('Аналіз даних (практика)', startTime2, endTime2, const Color(0xFF3272d1), false));
+  meetings.add(Meeting('Іноземна мова', startTime3, endTime3, const Color(0xFF0F8644), false));
   return meetings;
 }
 
