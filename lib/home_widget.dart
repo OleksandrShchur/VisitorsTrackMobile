@@ -3,6 +3,7 @@ import 'package:helloworld/theme.dart';
 import 'package:helloworld/table_calendar.dart';
 import 'package:helloworld/group_widget.dart';
 import 'package:helloworld/notification_widget.dart';
+import 'package:helloworld/login_widget.dart';
 
 class HomeWidget extends StatefulWidget {
   @override
@@ -123,8 +124,7 @@ class HomeState extends State<HomeWidget> {
                   FlatButton(
                     textColor: Color(0xFFFF4D4D),
                     onPressed: () {
-                      Navigator.of(context).pop();
-                      Navigator.pop(context);
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => LoginWidget()));
                     },
                     child: Text('Вийти'),
                   ),
