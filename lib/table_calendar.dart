@@ -55,7 +55,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
             locale: 'uk_UK',
           ),
           SfCalendar(
-            view: CalendarView.week,
+            view: CalendarView.day,
           ),
         ],
       ),
