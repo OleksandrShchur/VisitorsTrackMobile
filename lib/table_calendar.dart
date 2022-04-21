@@ -67,38 +67,38 @@ class _ScheduleTableState extends State<ScheduleTable> {
                     context: context,
                     builder: (BuildContext context) {
                       return AlertDialog(
-                          title: Container(
-                            child: new Text(target.eventName),
-                          ),
-                          content: Container(
-                            height: 100,
-                            child: Column(children: <Widget>[
-                              Row(
-                                children: <Widget>[
-                                  Text(
-                                    dateText,
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 20,
-                                    ),
+                        title: Container(
+                          child: new Text(target.eventName),
+                        ),
+                        content: Container(
+                          height: 150,
+                          child: Column(children: <Widget>[
+                            Row(
+                              children: <Widget>[
+                                Text(
+                                  dateText,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 20,
                                   ),
-                                ],
-                              ),
-                              Row(
-                                children: <Widget>[
-                                  Text(''),
-                                ],
-                              ),
-                            ]),
-                          ));
-                      actions:
-                      <Widget>[
-                        new FlatButton(
-                            onPressed: () {
-                              Navigator.of(context).pop();
-                            },
-                            child: new Text('Закрити'))
-                      ];
+                                ),
+                              ],
+                            ),
+                            Row(
+                              children: <Widget>[
+                                Text(''),
+                              ],
+                            ),
+                          ]),
+                        ),
+                        actions: [
+                          new FlatButton(
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                              child: new Text('Закрити'))
+                        ],
+                      );
                     });
               },
             ),
