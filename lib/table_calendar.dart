@@ -60,6 +60,45 @@ class _ScheduleTableState extends State<ScheduleTable> {
               initialSelectedDate: DateTime.now(),
               monthViewSettings: MonthViewSettings(showAgenda: true, navigationDirection: MonthNavigationDirection.vertical, dayFormat: 'EEE'),
               dataSource: MeetingDataSource(_getDataSource()),
+              onTap: (CalendarTapDetails detail) {
+                showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return AlertDialog(
+                          title: Container(
+                            child: new Text(detail.appointments[0]),
+                          ),
+                          content: Container(
+                            height: 100,
+                            child: Column(children: <Widget>[
+                              Row(
+                                children: <Widget>[
+                                  Text(
+                                    detail.appointments[0].from,
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 20,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                children: <Widget>[
+                                  Text(''),
+                                ],
+                              ),
+                            ]),
+                          ));
+                      actions:
+                      <Widget>[
+                        new FlatButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: new Text('Закрити'))
+                      ];
+                    });
+              },
             ),
           ),
         ],
@@ -122,4 +161,44 @@ class Meeting {
   DateTime to;
   Color background;
   bool isAllDay;
+}
+
+void CalendarTapped(CalendarTapDetails detail, BuildContext context) {
+  showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+            title: Container(
+              child: new Text(detail.appointments[0]),
+            ),
+            content: Container(
+              height: 100,
+              child: Column(children: <Widget>[
+                Row(
+                  children: <Widget>[
+                    Text(
+                      detail.appointments[0].from,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 20,
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: <Widget>[
+                    Text(''),
+                  ],
+                ),
+              ]),
+            ));
+        actions:
+        <Widget>[
+          new FlatButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: new Text('Закрити'))
+        ];
+      });
 }
