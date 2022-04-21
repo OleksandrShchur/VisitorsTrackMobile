@@ -61,12 +61,14 @@ class _ScheduleTableState extends State<ScheduleTable> {
               monthViewSettings: MonthViewSettings(showAgenda: true, navigationDirection: MonthNavigationDirection.vertical, dayFormat: 'EEE'),
               dataSource: MeetingDataSource(_getDataSource()),
               onTap: (CalendarTapDetails detail) {
+                final Meeting target = detail.appointments[0];
+                final DateTime dateText = DateFormat('MMMM dd, yyyy').format(target.from).toString();
                 showDialog(
                     context: context,
                     builder: (BuildContext context) {
                       return AlertDialog(
                           title: Container(
-                            child: new Text(detail.appointments[0].toString()),
+                            child: new Text(target.eventName),
                           ),
                           content: Container(
                             height: 100,
@@ -74,7 +76,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
                               Row(
                                 children: <Widget>[
                                   Text(
-                                    detail.appointments[0].from.toString(),
+                                    dateText.toString(),
                                     style: TextStyle(
                                       fontWeight: FontWeight.w400,
                                       fontSize: 20,
