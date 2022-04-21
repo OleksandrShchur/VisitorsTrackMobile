@@ -62,7 +62,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
               dataSource: MeetingDataSource(_getDataSource()),
               onTap: (CalendarTapDetails detail) {
                 final Meeting target = detail.appointments[0];
-                final DateTime dateText = DateFormat('MMMM dd, yyyy').format(target.from).toString();
+                final String dateText = DateFormat('MMMM dd, yyyy').format(target.from);
                 showDialog(
                     context: context,
                     builder: (BuildContext context) {
@@ -76,7 +76,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
                               Row(
                                 children: <Widget>[
                                   Text(
-                                    dateText.toString(),
+                                    dateText,
                                     style: TextStyle(
                                       fontWeight: FontWeight.w400,
                                       fontSize: 20,
