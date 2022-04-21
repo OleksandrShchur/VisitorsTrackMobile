@@ -26,6 +26,7 @@ dependencies:
   bloc: ^8.0.3
   table_calendar: ^3.0.5
   syncfusion_flutter_calendar: ^20.1.50
+  syncfusion_localizations: ^20.1.50
 
 dev_dependencies:
   flutter_test:
