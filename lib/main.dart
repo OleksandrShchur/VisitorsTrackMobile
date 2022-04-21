@@ -14,9 +14,9 @@ class MyApp extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
       ],
       supportedLocales: [
-        const Locale('uk'),
+        const Locale('en'),
       ],
-      locale: const Locale('uk'),
+      locale: const Locale('en'),
       debugShowCheckedModeBanner: false,
       title: 'Visitors Tracker Mobile',
       theme: ThemeData(
