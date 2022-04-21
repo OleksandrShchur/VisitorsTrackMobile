@@ -54,11 +54,13 @@ class _ScheduleTableState extends State<ScheduleTable> {
           //   },
           //   locale: 'uk_UK',
           // ),
-          SfCalendar(
-            view: CalendarView.month,
-            initialSelectedDate: DateTime.now(),
-            monthViewSettings: MonthViewSettings(showAgenda: true, navigationDirection: MonthNavigationDirection.vertical, numberOfWeeksInView: 2, dayFormat: 'EEE'),
-            dataSource: MeetingDataSource(_getDataSource()),
+          Expanded(
+            child: SfCalendar(
+              view: CalendarView.month,
+              initialSelectedDate: DateTime.now(),
+              monthViewSettings: MonthViewSettings(showAgenda: true, navigationDirection: MonthNavigationDirection.vertical, numberOfWeeksInView: 2, dayFormat: 'EEE'),
+              dataSource: MeetingDataSource(_getDataSource()),
+            ),
           ),
         ],
       ),
