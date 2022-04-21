@@ -66,7 +66,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
                     builder: (BuildContext context) {
                       return AlertDialog(
                           title: Container(
-                            child: new Text(detail.appointments[0]),
+                            child: new Text(detail.appointments[0].toString()),
                           ),
                           content: Container(
                             height: 100,
@@ -74,7 +74,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
                               Row(
                                 children: <Widget>[
                                   Text(
-                                    detail.appointments[0].from,
+                                    detail.appointments[0].from.toString(),
                                     style: TextStyle(
                                       fontWeight: FontWeight.w400,
                                       fontSize: 20,
