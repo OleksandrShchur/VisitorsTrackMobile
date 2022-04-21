@@ -79,7 +79,7 @@ List<Meeting> _getDataSource() {
   final DateTime endTime3 = startTime3.add(const Duration(hours: 1, minutes: 20));
   meetings.add(Meeting('Аналіз даних (лекція)', startTime, endTime, const Color(0xFF0F8644), false));
   meetings.add(Meeting('Аналіз даних (практика)', startTime2, endTime2, const Color(0xFF3272d1), false));
-  meetings.add(Meeting('Іноземна мова', startTime3, endTime3, const Color(0xFF0F8644), false));
+  meetings.add(Meeting('Іноземна мова', startTime3, endTime3, const Color(0xFFbae03d), false));
   return meetings;
 }
 
