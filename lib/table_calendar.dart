@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ScheduleTable extends StatefulWidget {
   @override
@@ -115,7 +116,12 @@ class _ScheduleTableState extends State<ScheduleTable> {
                                   color: Colors.black,
                                   size: 24,
                                 ),
-                                Text('  Аудиторія: ' + target.audit),
+                                Text(
+                                  '  Аудиторія: ' + target.audit,
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                  ),
+                                ),
                               ],
                             ),
                             const Divider(
@@ -127,7 +133,20 @@ class _ScheduleTableState extends State<ScheduleTable> {
                             ),
                             Row(
                               children: <Widget>[
-                                Text('  Посилання: ' + target.urlMeeting),
+                                TextButton(
+                                  style: TextButton.styleFrom(
+                                    textStyle: const TextStyle(fontSize: 18),
+                                  ),
+                                  onPressed: () async {
+                                    if (await canLaunch(target.urlMeeting))
+                                      await launch(target.urlMeeting);
+                                    else
+                                      // can't launch url, there is some error
+                                      throw "Could not launch $target.urlMeeting";
+                                  },
+                                  child: const Text('Посилання на заняття'),
+                                ),
+                                const SizedBox(height: 24),
                               ],
                             ),
                           ]),
