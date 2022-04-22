@@ -94,7 +94,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
                                   color: Colors.black,
                                   size: 24,
                                 ),
-                                Text(target.from.toString()),
+                                Text(target.from.timeZoneOffset.toString()),
                               ],
                             ),
                           ]),
