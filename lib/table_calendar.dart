@@ -121,7 +121,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
                             const Divider(
                               height: 5,
                               thickness: 1,
-                              indent: 20,
+                              indent: 25,
                               endIndent: 0,
                               color: Colors.black,
                             ),
