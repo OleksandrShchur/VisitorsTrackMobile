@@ -95,7 +95,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
                                   color: Colors.black,
                                   size: 24,
                                 ),
-                                Text(timeClass),
+                                Text('  ' + timeClass),
                               ],
                             ),
                           ]),
