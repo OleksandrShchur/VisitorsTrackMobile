@@ -76,7 +76,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
                                 Icon(
                                   Icons.calendar_month_rounded,
                                   color: Colors.black,
-                                  size: 30,
+                                  size: 24,
                                 ),
                                 Text(
                                   dateText,
@@ -89,7 +89,12 @@ class _ScheduleTableState extends State<ScheduleTable> {
                             ),
                             Row(
                               children: <Widget>[
-                                Text(''),
+                                Icon(
+                                  Icons.access_time,
+                                  color: Colors.black,
+                                  size: 24,
+                                ),
+                                Text('Some text'),
                               ],
                             ),
                           ]),
