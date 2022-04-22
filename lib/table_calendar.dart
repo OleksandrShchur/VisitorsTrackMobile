@@ -73,6 +73,11 @@ class _ScheduleTableState extends State<ScheduleTable> {
                           child: Column(children: <Widget>[
                             Row(
                               children: <Widget>[
+                                Icon(
+                                  Icons.calendar_month_rounded,
+                                  color: Colors.lightBlue,
+                                  size: 24,
+                                ),
                                 Text(
                                   dateText,
                                   style: TextStyle(
@@ -118,9 +123,9 @@ List<Meeting> _getDataSource() {
   final DateTime endTime2 = startTime2.add(const Duration(hours: 1, minutes: 20));
   final DateTime startTime3 = DateTime(today.year, today.month, today.day, 13, 00, 0);
   final DateTime endTime3 = startTime3.add(const Duration(hours: 1, minutes: 20));
-  meetings.add(Meeting('Аналіз даних (лекція)', startTime, endTime, const Color(0xFF0F8644), false));
-  meetings.add(Meeting('Аналіз даних (практика)', startTime2, endTime2, const Color(0xFF3272d1), false));
-  meetings.add(Meeting('Іноземна мова', startTime3, endTime3, const Color(0xFFa87e2f), false));
+  meetings.add(Meeting('Аналіз даних (лекція)', startTime, endTime, const Color(0xFF0F8644), "https://meet.google.com/pkt-eade-bpm", 2, '39'));
+  meetings.add(Meeting('Аналіз даних (практика)', startTime2, endTime2, const Color(0xFF3272d1), "https://meet.google.com/pkt-eade-bpm", 3, '3'));
+  meetings.add(Meeting('Іноземна мова', startTime3, endTime3, const Color(0xFFa87e2f), "https://meet.google.com/pkt-eade-bpm", 4, '11'));
   return meetings;
 }
 
@@ -156,51 +161,13 @@ class MeetingDataSource extends CalendarDataSource {
 }
 
 class Meeting {
-  Meeting(this.eventName, this.from, this.to, this.background, this.isAllDay);
+  Meeting(this.eventName, this.from, this.to, this.background, this.urlMeeting, this.posOfClass, this.audit);
 
   String eventName;
   DateTime from;
   DateTime to;
   Color background;
-  bool isAllDay;
-}
-
-void CalendarTapped(CalendarTapDetails detail, BuildContext context) {
-  showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-            title: Container(
-              child: new Text(detail.appointments[0]),
-            ),
-            content: Container(
-              height: 100,
-              child: Column(children: <Widget>[
-                Row(
-                  children: <Widget>[
-                    Text(
-                      detail.appointments[0].from,
-                      style: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontSize: 20,
-                      ),
-                    ),
-                  ],
-                ),
-                Row(
-                  children: <Widget>[
-                    Text(''),
-                  ],
-                ),
-              ]),
-            ));
-        actions:
-        <Widget>[
-          new FlatButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-              child: new Text('Закрити'))
-        ];
-      });
+  String urlMeeting;
+  int posOfClass;
+  String audit;
 }
