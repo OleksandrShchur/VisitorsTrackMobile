@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      locale: const Locale('en'),
+      locale: const Locale('uk'),
       debugShowCheckedModeBanner: false,
       title: 'Visitors Tracker Mobile',
       theme: ThemeData(
