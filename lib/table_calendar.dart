@@ -135,7 +135,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
                               children: <Widget>[
                                 TextButton(
                                   style: TextButton.styleFrom(
-                                    textStyle: const TextStyle(fontSize: 18),
+                                    textStyle: const TextStyle(fontSize: 18, color: Colors.blue),
                                   ),
                                   onPressed: () async {
                                     if (await canLaunch(target.urlMeeting))
