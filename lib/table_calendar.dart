@@ -125,6 +125,11 @@ class _ScheduleTableState extends State<ScheduleTable> {
                               endIndent: 10,
                               color: Colors.black,
                             ),
+                            Row(
+                              children: <Widget>[
+                                Text('  Посилання: ' + target.urlMeeting),
+                              ],
+                            ),
                           ]),
                         ),
                         actions: [
