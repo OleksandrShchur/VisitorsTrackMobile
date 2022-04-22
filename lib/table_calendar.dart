@@ -122,7 +122,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
                               height: 5,
                               thickness: 1,
                               indent: 30,
-                              endIndent: 0,
+                              endIndent: 10,
                               color: Colors.black,
                             ),
                           ]),
