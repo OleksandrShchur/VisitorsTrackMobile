@@ -76,7 +76,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
                                 Icon(
                                   Icons.calendar_month_rounded,
                                   color: Colors.lightBlue[300],
-                                  size: 24,
+                                  size: 10,
                                 ),
                                 Text(
                                   dateText,
