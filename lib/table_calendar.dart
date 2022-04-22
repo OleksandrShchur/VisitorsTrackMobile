@@ -61,6 +61,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
               onTap: (CalendarTapDetails detail) {
                 final Meeting target = detail.appointments[0];
                 final String dateText = DateFormat('MMMM dd, yyyy').format(target.from);
+                final String timeClass = DateFormat('hh:mm - ').format(target.from) + DateFormat('hh:mm').format(target.to);
                 showDialog(
                     context: context,
                     builder: (BuildContext context) {
@@ -94,7 +95,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
                                   color: Colors.black,
                                   size: 24,
                                 ),
-                                Text(target.from.timeZoneOffset.toString()),
+                                Text(timeClass),
                               ],
                             ),
                           ]),
