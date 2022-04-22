@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:table_calendar/table_calendar.dart';
 import 'package:intl/intl.dart';
-import 'package:intl/date_symbol_data_local.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 
 class ScheduleTable extends StatefulWidget {
@@ -79,7 +77,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
                                   dateText,
                                   style: TextStyle(
                                     fontWeight: FontWeight.w400,
-                                    fontSize: 20,
+                                    fontSize: 18,
                                   ),
                                 ),
                               ],
