@@ -153,11 +153,6 @@ class MeetingDataSource extends CalendarDataSource {
   Color getColor(int index) {
     return appointments[index].background;
   }
-
-  @override
-  bool isAllDay(int index) {
-    return appointments[index].isAllDay;
-  }
 }
 
 class Meeting {
