@@ -75,8 +75,8 @@ class _ScheduleTableState extends State<ScheduleTable> {
                               children: <Widget>[
                                 Icon(
                                   Icons.calendar_month_rounded,
-                                  color: Colors.lightBlue[300],
-                                  size: 10,
+                                  color: Colors.black,
+                                  size: 30,
                                 ),
                                 Text(
                                   dateText,
