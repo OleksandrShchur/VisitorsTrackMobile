@@ -95,8 +95,35 @@ class _ScheduleTableState extends State<ScheduleTable> {
                                   color: Colors.black,
                                   size: 24,
                                 ),
-                                Text('  ' + timeClass),
+                                Text(
+                                  '  ' + timeClass,
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                  ),
+                                ),
                               ],
+                            ),
+                            Row(
+                              children: <Widget>[
+                                Text(''),
+                              ],
+                            ),
+                            Row(
+                              children: <Widget>[
+                                Icon(
+                                  Icons.place_outlined,
+                                  color: Colors.black,
+                                  size: 24,
+                                ),
+                                Text('  Аудиторія: ' + target.audit),
+                              ],
+                            ),
+                            const Divider(
+                              height: 5,
+                              thickness: 5,
+                              indent: 20,
+                              endIndent: 0,
+                              color: Colors.black,
                             ),
                           ]),
                         ),
@@ -129,9 +156,9 @@ List<Meeting> _getDataSource() {
   final DateTime endTime2 = startTime2.add(const Duration(hours: 1, minutes: 20));
   final DateTime startTime3 = DateTime(today.year, today.month, today.day, 13, 00, 0);
   final DateTime endTime3 = startTime3.add(const Duration(hours: 1, minutes: 20));
-  meetings.add(Meeting('Аналіз даних (лекція)', startTime, endTime, const Color(0xFF0F8644), "https://meet.google.com/pkt-eade-bpm", 2, '39'));
-  meetings.add(Meeting('Аналіз даних (практика)', startTime2, endTime2, const Color(0xFF3272d1), "https://meet.google.com/pkt-eade-bpm", 3, '3'));
-  meetings.add(Meeting('Іноземна мова', startTime3, endTime3, const Color(0xFFa87e2f), "https://meet.google.com/pkt-eade-bpm", 4, '11'));
+  meetings.add(Meeting('Аналіз даних (лекція)', startTime, endTime, const Color(0xFF0F8644), "https://meet.google.com/pkt-eade-bpm", '39'));
+  meetings.add(Meeting('Аналіз даних (практика)', startTime2, endTime2, const Color(0xFF3272d1), "https://meet.google.com/pkt-eade-bpm", '3'));
+  meetings.add(Meeting('Іноземна мова', startTime3, endTime3, const Color(0xFFa87e2f), "https://meet.google.com/pkt-eade-bpm", '11'));
   return meetings;
 }
 
@@ -162,13 +189,12 @@ class MeetingDataSource extends CalendarDataSource {
 }
 
 class Meeting {
-  Meeting(this.eventName, this.from, this.to, this.background, this.urlMeeting, this.posOfClass, this.audit);
+  Meeting(this.eventName, this.from, this.to, this.background, this.urlMeeting, this.audit);
 
   String eventName;
   DateTime from;
   DateTime to;
   Color background;
   String urlMeeting;
-  int posOfClass;
   String audit;
 }
