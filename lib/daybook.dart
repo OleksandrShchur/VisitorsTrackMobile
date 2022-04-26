@@ -36,10 +36,10 @@ class _DaybookState extends State<Daybook> {
             Center(
               child: Card(
                   child: Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
-                const ListTile(
+                ListTile(
                   leading: Icon(Icons.album),
-                  title: Text('The Enchanted Nightingale'),
-                  subtitle: Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
+                  title: Text(this.subjectName),
+                  subtitle: Text(this.date),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
