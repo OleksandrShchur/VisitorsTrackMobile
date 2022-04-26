@@ -63,7 +63,7 @@ class _DaybookState extends State<Daybook> {
             ])),
             Column(
               children: [
-                Text('test'),
+                GroupList(),
               ],
             ),
           ],
