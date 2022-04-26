@@ -28,9 +28,14 @@ class _DaybookState extends State<Daybook> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Журнал відвідуваності'),
-      ),
-    );
+        appBar: AppBar(
+          title: Text('Журнал відвідуваності'),
+        ),
+        body: Column(
+          children: [
+            Text(this.subjectName),
+            Text(this.date),
+          ],
+        ));
   }
 }
