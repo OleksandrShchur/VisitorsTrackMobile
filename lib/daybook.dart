@@ -45,14 +45,14 @@ class _DaybookState extends State<Daybook> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
                     TextButton(
-                      child: const Text('BUY TICKETS'),
+                      child: const Text('Відмітити присутніх'),
                       onPressed: () {
                         /* ... */
                       },
                     ),
                     const SizedBox(width: 8),
                     TextButton(
-                      child: const Text('LISTEN'),
+                      child: const Text('Внести зміни у заняття'),
                       onPressed: () {
                         /* ... */
                       },
