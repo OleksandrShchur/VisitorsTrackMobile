@@ -43,7 +43,7 @@ class _DaybookState extends State<Daybook> {
                   subtitle: Text(this.date),
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     TextButton(
                       child: const Text('Відмітити присутніх'),
@@ -63,7 +63,7 @@ class _DaybookState extends State<Daybook> {
                 ),
               ])),
             ),
-            GroupList(),
+            //GroupList(),
           ],
         ));
   }
