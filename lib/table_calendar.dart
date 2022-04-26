@@ -153,6 +153,13 @@ class _ScheduleTableState extends State<ScheduleTable> {
                         ),
                         actions: [
                           new FlatButton(
+                            textColor: Color(0xFF4257f5),
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: Text('Закрити'),
+                          ),
+                          new FlatButton(
                             textColor: Color(0xFFFF4D4D),
                             onPressed: () {
                               Navigator.of(context).pop();
