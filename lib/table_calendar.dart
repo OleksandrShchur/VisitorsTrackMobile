@@ -72,7 +72,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
                           child: new Text(target.eventName),
                         ),
                         content: Container(
-                          height: 130,
+                          height: 150,
                           child: Column(children: <Widget>[
                             Row(
                               children: <Widget>[
@@ -150,6 +150,26 @@ class _ScheduleTableState extends State<ScheduleTable> {
                                 const SizedBox(height: 24),
                               ],
                             ),
+                            Row(
+                              children: <Widget>[
+                                Icon(
+                                  Icons.place_outlined,
+                                  color: Colors.black,
+                                  size: 24,
+                                ),
+                                Text(
+                                  '  Групи: ' +
+                                      target.groups
+                                          .map((e) => {
+                                                e.toString()
+                                              })
+                                          .toString(),
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ]),
                         ),
                         actions: [
@@ -189,9 +209,22 @@ List<Meeting> _getDataSource() {
   final DateTime endTime2 = startTime2.add(const Duration(hours: 1, minutes: 20));
   final DateTime startTime3 = DateTime(today.year, today.month, today.day, 13, 00, 0);
   final DateTime endTime3 = startTime3.add(const Duration(hours: 1, minutes: 20));
-  meetings.add(Meeting('Аналіз даних (лекція)', startTime, endTime, const Color(0xFF0F8644), "https://meet.google.com/pkt-eade-bpm", '39'));
-  meetings.add(Meeting('Аналіз даних (практика)', startTime2, endTime2, const Color(0xFF3272d1), "https://meet.google.com/pkt-eade-bpm", '3'));
-  meetings.add(Meeting('Іноземна мова', startTime3, endTime3, const Color(0xFFa87e2f), "https://meet.google.com/pkt-eade-bpm", '11'));
+  meetings.add(Meeting('Аналіз даних (лекція)', startTime, endTime, const Color(0xFF0F8644), "https://meet.google.com/pkt-eade-bpm", '39', [
+    '401a',
+    '401б',
+    '402',
+    '401*',
+    '402'
+  ]));
+  meetings.add(Meeting('Аналіз даних (практика)', startTime2, endTime2, const Color(0xFF3272d1), "https://meet.google.com/pkt-eade-bpm", '3', [
+    '401a',
+    '401б',
+    '401*'
+  ]));
+  meetings.add(Meeting('Іноземна мова', startTime3, endTime3, const Color(0xFFa87e2f), "https://meet.google.com/pkt-eade-bpm", '11', [
+    '401a',
+    '401б'
+  ]));
   return meetings;
 }
 
@@ -222,7 +255,7 @@ class MeetingDataSource extends CalendarDataSource {
 }
 
 class Meeting {
-  Meeting(this.eventName, this.from, this.to, this.background, this.urlMeeting, this.audit);
+  Meeting(this.eventName, this.from, this.to, this.background, this.urlMeeting, this.audit, this.groups);
 
   String eventName;
   DateTime from;
@@ -230,4 +263,5 @@ class Meeting {
   Color background;
   String urlMeeting;
   String audit;
+  List<String> groups;
 }
