@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:helloworld/group_list_widget.dart';
 
 class Daybook extends StatefulWidget {
   final String subjectName;
@@ -61,7 +62,8 @@ class _DaybookState extends State<Daybook> {
                   ],
                 ),
               ])),
-            )
+            ),
+            GroupList(),
           ],
         ));
   }
