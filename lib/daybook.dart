@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:helloworld/group_list_widget.dart';
 import 'package:helloworld/models/group-member_model.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
 
 class Daybook extends StatefulWidget {
   final String subjectName;
@@ -69,15 +70,7 @@ class _DaybookState extends State<Daybook> {
                 ],
               ),
             ])),
-            Card(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text('Hello world!')
-                  //GroupList(),
-                ],
-              ),
-            ),
+            Card(child: Container(child: SfCartesianChart())),
           ],
         ));
   }
