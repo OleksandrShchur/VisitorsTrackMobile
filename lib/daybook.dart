@@ -74,7 +74,7 @@ class _DaybookState extends State<Daybook> {
             ])),
             Card(
                 child: Container(
-                    child: SfCartesianChart(primaryXAxis: CategoryAxis(), title: ChartTitle(text: 'Аналіз відвідуваності заняття'), legend: Legend(isVisible: true), tooltipBehavior: _tooltipBehavior, series: <LineSeries<VisitingClassData, String>>[
+                    child: SfCartesianChart(primaryXAxis: CategoryAxis(), title: ChartTitle(text: 'Аналіз відвідуваності заняття'), legend: new Legend(isVisible: true, title: LegendTitle(text: 'Весь потік')), tooltipBehavior: _tooltipBehavior, series: <LineSeries<VisitingClassData, String>>[
               LineSeries<VisitingClassData, String>(
                 dataSource: <VisitingClassData>[
                   VisitingClassData(1, 90),
@@ -88,6 +88,7 @@ class _DaybookState extends State<Daybook> {
                   VisitingClassData(9, 93),
                   VisitingClassData(10, 85),
                 ],
+                name: 'Весь потік',
                 xValueMapper: (VisitingClassData data, _) => data.weekNumber.toString(),
                 yValueMapper: (VisitingClassData data, _) => data.percentOfVisiting,
                 dataLabelSettings: DataLabelSettings(isVisible: true),
