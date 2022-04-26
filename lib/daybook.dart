@@ -69,20 +69,12 @@ class _DaybookState extends State<Daybook> {
                 ],
               ),
             ])),
-            Column(
-              children: [
-                Expanded(
-                    child: ListView.builder(
-                  itemBuilder: (context, index) {
-                    return ListTile(
-                      title: Text(groupMembers[index].fullname),
-                      subtitle: Text(groupMembers[index].group),
-                      leading: Icon(Icons.account_circle_rounded, size: 48),
-                    );
-                  },
-                  itemCount: groupMembers.length,
-                )),
-              ],
+            Card(
+              child: Column(
+                children: [
+                  GroupList(),
+                ],
+              ),
             ),
           ],
         ));
