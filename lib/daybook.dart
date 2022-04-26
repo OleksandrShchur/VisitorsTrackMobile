@@ -34,35 +34,33 @@ class _DaybookState extends State<Daybook> {
         ),
         body: Column(
           children: [
-            Center(
-              child: Card(
-                  child: Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
-                ListTile(
-                  leading: Icon(Icons.album),
-                  title: Text(this.subjectName),
-                  subtitle: Text(this.date),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    TextButton(
-                      child: const Text('Відмітити присутніх'),
-                      onPressed: () {
-                        /* ... */
-                      },
-                    ),
-                    const SizedBox(width: 8),
-                    TextButton(
-                      child: const Text('Внести зміни у заняття'),
-                      onPressed: () {
-                        /* ... */
-                      },
-                    ),
-                    const SizedBox(width: 8),
-                  ],
-                ),
-              ])),
-            ),
+            Card(
+                child: Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
+              ListTile(
+                leading: Icon(Icons.album),
+                title: Text(this.subjectName),
+                subtitle: Text(this.date),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  TextButton(
+                    child: const Text('Відмітити присутніх'),
+                    onPressed: () {
+                      /* ... */
+                    },
+                  ),
+                  const SizedBox(width: 8),
+                  TextButton(
+                    child: const Text('Внести зміни у заняття'),
+                    onPressed: () {
+                      /* ... */
+                    },
+                  ),
+                  const SizedBox(width: 8),
+                ],
+              ),
+            ])),
             //GroupList(),
           ],
         ));
