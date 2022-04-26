@@ -157,7 +157,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
                             onPressed: () {
                               Navigator.of(context).pop();
                             },
-                            child: Text('Закрити'),
+                            child: Text('Переглянути журнал'),
                           ),
                           new FlatButton(
                             textColor: Color(0xFFFF4D4D),
