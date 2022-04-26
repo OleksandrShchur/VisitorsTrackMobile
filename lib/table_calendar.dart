@@ -73,7 +73,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
                         ),
                         content: Container(
                           height: 180,
-                          width: 220,
+                          width: 250,
                           child: Column(children: <Widget>[
                             Row(
                               children: <Widget>[
