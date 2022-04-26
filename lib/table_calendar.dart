@@ -165,7 +165,8 @@ class _ScheduleTableState extends State<ScheduleTable> {
                                             .map((e) => {
                                                   e.toString()
                                                 })
-                                            .toString(),
+                                            .toString()
+                                            .replaceAll(RegExp(r'(\w+)'), ''),
                                     style: TextStyle(
                                       fontSize: 16,
                                     ),
