@@ -15,12 +15,14 @@ class Daybook extends StatefulWidget {
 }
 
 class _DaybookState extends State<Daybook> {
+  TooltipBehavior _tooltipBehavior;
   List<GroupMember> groupMembers;
   _DaybookState(this.subjectName, this.date);
   final String subjectName, date;
 
   @override
   void initState() {
+    _tooltipBehavior = TooltipBehavior(enable: true);
     super.initState();
 
     groupMembers = [
@@ -70,8 +72,35 @@ class _DaybookState extends State<Daybook> {
                 ],
               ),
             ])),
-            Card(child: Container(child: SfCartesianChart())),
+            Card(
+                child: Container(
+                    child: SfCartesianChart(primaryXAxis: CategoryAxis(), title: ChartTitle(text: 'Аналіз відвідуваності заняття'), legend: Legend(isVisible: true), tooltipBehavior: _tooltipBehavior, series: <LineSeries<VisitingClassData, String>>[
+              LineSeries<VisitingClassData, String>(
+                dataSource: <VisitingClassData>[
+                  VisitingClassData(1, 90),
+                  VisitingClassData(2, 82),
+                  VisitingClassData(3, 91),
+                  VisitingClassData(4, 87),
+                  VisitingClassData(5, 76),
+                  VisitingClassData(6, 71),
+                  VisitingClassData(7, 79),
+                  VisitingClassData(8, 80),
+                  VisitingClassData(9, 93),
+                  VisitingClassData(10, 85),
+                ],
+                xValueMapper: (VisitingClassData data, _) => data.weekNumber.toString(),
+                yValueMapper: (VisitingClassData data, _) => data.percentOfVisiting,
+                dataLabelSettings: DataLabelSettings(isVisible: true),
+              )
+            ]))),
           ],
         ));
   }
+}
+
+class VisitingClassData {
+  VisitingClassData(this.weekNumber, this.percentOfVisiting);
+
+  final int weekNumber;
+  final int percentOfVisiting;
 }
