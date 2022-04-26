@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:helloworld/daybook.dart';
 
 class ScheduleTable extends StatefulWidget {
   @override
@@ -156,6 +157,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
                             textColor: Color(0xFF4257f5),
                             onPressed: () {
                               Navigator.of(context).pop();
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => Daybook()));
                             },
                             child: Text('Переглянути журнал'),
                           ),
