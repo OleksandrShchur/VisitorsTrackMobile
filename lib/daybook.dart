@@ -71,6 +71,7 @@ class _DaybookState extends State<Daybook> {
             ])),
             Card(
               child: Column(
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   Text('Hello world!')
                   //GroupList(),
