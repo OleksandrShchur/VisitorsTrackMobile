@@ -12,6 +12,9 @@ class Daybook extends StatefulWidget {
 }
 
 class _DaybookState extends State<Daybook> {
+  _DaybookState(this.subjectName, this.date);
+  final String subjectName, date;
+
   @override
   void initState() {
     super.initState();

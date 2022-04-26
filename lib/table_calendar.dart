@@ -157,7 +157,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
                             textColor: Color(0xFF4257f5),
                             onPressed: () {
                               Navigator.of(context).pop();
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => Daybook()));
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => Daybook(subjectName: target.eventName, date: dateText)));
                             },
                             child: Text('Переглянути журнал'),
                           ),
