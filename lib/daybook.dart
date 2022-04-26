@@ -88,7 +88,6 @@ class _DaybookState extends State<Daybook> {
                   VisitingClassData(9, 93),
                   VisitingClassData(10, 85),
                 ],
-                name: 'Весь потік',
                 xValueMapper: (VisitingClassData data, _) => data.weekNumber.toString(),
                 yValueMapper: (VisitingClassData data, _) => data.percentOfVisiting,
                 dataLabelSettings: DataLabelSettings(isVisible: true),
