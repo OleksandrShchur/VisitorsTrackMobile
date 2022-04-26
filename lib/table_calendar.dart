@@ -72,8 +72,8 @@ class _ScheduleTableState extends State<ScheduleTable> {
                           child: new Text(target.eventName),
                         ),
                         content: Container(
-                          height: 170,
-                          width: 200,
+                          height: 180,
+                          width: 220,
                           child: Column(children: <Widget>[
                             Row(
                               children: <Widget>[
