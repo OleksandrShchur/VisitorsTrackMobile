@@ -61,7 +61,11 @@ class _DaybookState extends State<Daybook> {
                 ],
               ),
             ])),
-            GroupList(),
+            Column(
+              children: [
+                Text('test'),
+              ],
+            ),
           ],
         ));
   }
