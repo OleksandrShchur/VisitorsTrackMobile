@@ -166,7 +166,7 @@ class _ScheduleTableState extends State<ScheduleTable> {
                                                   e.toString()
                                                 })
                                             .toString()
-                                            .replaceAll(RegExp(r'^\w+'), ''),
+                                            .replaceAll(RegExp(r"[^\s\w]"), ''),
                                     style: TextStyle(
                                       fontSize: 16,
                                     ),
