@@ -157,15 +157,17 @@ class _ScheduleTableState extends State<ScheduleTable> {
                                   color: Colors.black,
                                   size: 24,
                                 ),
-                                Text(
-                                  '  Групи: ' +
-                                      target.groups
-                                          .map((e) => {
-                                                e.toString()
-                                              })
-                                          .toString(),
-                                  style: TextStyle(
-                                    fontSize: 18,
+                                Expanded(
+                                  child: Text(
+                                    '  Групи: ' +
+                                        target.groups
+                                            .map((e) => {
+                                                  e.toString()
+                                                })
+                                            .toString(),
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                    ),
                                   ),
                                 ),
                               ],
