@@ -72,7 +72,8 @@ class _DaybookState extends State<Daybook> {
             Card(
               child: Column(
                 children: [
-                  GroupList(),
+                  Text('Hello world!')
+                  //GroupList(),
                 ],
               ),
             ),
