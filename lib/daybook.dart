@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:helloworld/group_list_widget.dart';
+import 'package:helloworld/models/group-member_model.dart';
 
 class Daybook extends StatefulWidget {
   final String subjectName;
@@ -13,12 +14,19 @@ class Daybook extends StatefulWidget {
 }
 
 class _DaybookState extends State<Daybook> {
+  List<GroupMember> groupMembers;
   _DaybookState(this.subjectName, this.date);
   final String subjectName, date;
 
   @override
   void initState() {
     super.initState();
+
+    groupMembers = [
+      new GroupMember('Щур Олександр Іванович', '401б', ''),
+      new GroupMember('Мадей Андрій Олександрович', '401а', ''),
+      new GroupMember('Роєк Анастасія Іванівна', '401б', '')
+    ];
   }
 
   @override
@@ -63,7 +71,17 @@ class _DaybookState extends State<Daybook> {
             ])),
             Column(
               children: [
-                Expanded(child: GroupList()),
+                Expanded(
+                    child: ListView.builder(
+                  itemBuilder: (context, index) {
+                    return ListTile(
+                      title: Text(groupMembers[index].fullname),
+                      subtitle: Text(groupMembers[index].group),
+                      leading: Icon(Icons.account_circle_rounded, size: 48),
+                    );
+                  },
+                  itemCount: groupMembers.length,
+                )),
               ],
             ),
           ],
