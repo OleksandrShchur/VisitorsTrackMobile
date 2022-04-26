@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 
 class Daybook extends StatefulWidget {
-  @override
-  _DaybookState createState() => _DaybookState();
+  final String subjectName;
+  final String date;
+
+  Daybook({String subjectName, String date})
+      : this.subjectName = subjectName,
+        this.date = date;
+
+  _DaybookState createState() => _DaybookState(subjectName, date);
 }
 
 class _DaybookState extends State<Daybook> {
