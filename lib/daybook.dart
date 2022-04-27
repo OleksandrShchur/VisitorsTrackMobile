@@ -60,6 +60,11 @@ class _DaybookState extends State<Daybook> {
                 title: Text('Кількість студентів'),
                 subtitle: Text('44'),
               ),
+              ListTile(
+                leading: Icon(Icons.supervised_user_circle_outlined),
+                title: Text('Час проведення'),
+                subtitle: Text('Четвер, 9.50 - 11.10, щотижня'),
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
