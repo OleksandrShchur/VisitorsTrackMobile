@@ -217,8 +217,7 @@ List<Meeting> _getDataSource() {
     '401a',
     '401б',
     '402',
-    '401*',
-    '402'
+    '401*'
   ]));
   meetings.add(Meeting('Аналіз даних (практика)', startTime2, endTime2, const Color(0xFF3272d1), "https://meet.google.com/pkt-eade-bpm", '3', [
     '401a',
