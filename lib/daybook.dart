@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:helloworld/group_list_widget.dart';
 import 'package:helloworld/models/group-member_model.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
+import 'dart:math';
 
 class Daybook extends StatefulWidget {
   final String subjectName;
@@ -19,11 +20,13 @@ class _DaybookState extends State<Daybook> {
   List<GroupMember> groupMembers;
   _DaybookState(this.subjectName, this.date);
   final String subjectName, date;
+  Random random;
 
   @override
   void initState() {
     _tooltipBehavior = TooltipBehavior(enable: true);
     super.initState();
+    this.random = new Random();
 
     groupMembers = [
       new GroupMember('Щур Олександр Іванович', '401б', ''),
@@ -89,6 +92,78 @@ class _DaybookState extends State<Daybook> {
                   VisitingClassData(10, 85),
                 ],
                 name: 'Весь потік',
+                xValueMapper: (VisitingClassData data, _) => data.weekNumber.toString(),
+                yValueMapper: (VisitingClassData data, _) => data.percentOfVisiting,
+                dataLabelSettings: DataLabelSettings(isVisible: true),
+              ),
+              LineSeries<VisitingClassData, String>(
+                dataSource: <VisitingClassData>[
+                  VisitingClassData(1, random.nextInt(50) + 40),
+                  VisitingClassData(2, random.nextInt(50) + 40),
+                  VisitingClassData(3, random.nextInt(50) + 40),
+                  VisitingClassData(4, random.nextInt(50) + 40),
+                  VisitingClassData(5, random.nextInt(50) + 40),
+                  VisitingClassData(6, random.nextInt(50) + 40),
+                  VisitingClassData(7, random.nextInt(50) + 40),
+                  VisitingClassData(8, random.nextInt(50) + 40),
+                  VisitingClassData(9, random.nextInt(50) + 40),
+                  VisitingClassData(10, random.nextInt(50) + 40),
+                ],
+                name: '401a',
+                xValueMapper: (VisitingClassData data, _) => data.weekNumber.toString(),
+                yValueMapper: (VisitingClassData data, _) => data.percentOfVisiting,
+                dataLabelSettings: DataLabelSettings(isVisible: true),
+              ),
+              LineSeries<VisitingClassData, String>(
+                dataSource: <VisitingClassData>[
+                  VisitingClassData(1, random.nextInt(50) + 40),
+                  VisitingClassData(2, random.nextInt(50) + 40),
+                  VisitingClassData(3, random.nextInt(50) + 40),
+                  VisitingClassData(4, random.nextInt(50) + 40),
+                  VisitingClassData(5, random.nextInt(50) + 40),
+                  VisitingClassData(6, random.nextInt(50) + 40),
+                  VisitingClassData(7, random.nextInt(50) + 40),
+                  VisitingClassData(8, random.nextInt(50) + 40),
+                  VisitingClassData(9, random.nextInt(50) + 40),
+                  VisitingClassData(10, random.nextInt(50) + 40),
+                ],
+                name: '401б',
+                xValueMapper: (VisitingClassData data, _) => data.weekNumber.toString(),
+                yValueMapper: (VisitingClassData data, _) => data.percentOfVisiting,
+                dataLabelSettings: DataLabelSettings(isVisible: true),
+              ),
+              LineSeries<VisitingClassData, String>(
+                dataSource: <VisitingClassData>[
+                  VisitingClassData(1, random.nextInt(50) + 40),
+                  VisitingClassData(2, random.nextInt(50) + 40),
+                  VisitingClassData(3, random.nextInt(50) + 40),
+                  VisitingClassData(4, random.nextInt(50) + 40),
+                  VisitingClassData(5, random.nextInt(50) + 40),
+                  VisitingClassData(6, random.nextInt(50) + 40),
+                  VisitingClassData(7, random.nextInt(50) + 40),
+                  VisitingClassData(8, random.nextInt(50) + 40),
+                  VisitingClassData(9, random.nextInt(50) + 40),
+                  VisitingClassData(10, random.nextInt(50) + 40),
+                ],
+                name: '401*',
+                xValueMapper: (VisitingClassData data, _) => data.weekNumber.toString(),
+                yValueMapper: (VisitingClassData data, _) => data.percentOfVisiting,
+                dataLabelSettings: DataLabelSettings(isVisible: true),
+              ),
+              LineSeries<VisitingClassData, String>(
+                dataSource: <VisitingClassData>[
+                  VisitingClassData(1, random.nextInt(50) + 40),
+                  VisitingClassData(2, random.nextInt(50) + 40),
+                  VisitingClassData(3, random.nextInt(50) + 40),
+                  VisitingClassData(4, random.nextInt(50) + 40),
+                  VisitingClassData(5, random.nextInt(50) + 40),
+                  VisitingClassData(6, random.nextInt(50) + 40),
+                  VisitingClassData(7, random.nextInt(50) + 40),
+                  VisitingClassData(8, random.nextInt(50) + 40),
+                  VisitingClassData(9, random.nextInt(50) + 40),
+                  VisitingClassData(10, random.nextInt(50) + 40),
+                ],
+                name: '402',
                 xValueMapper: (VisitingClassData data, _) => data.weekNumber.toString(),
                 yValueMapper: (VisitingClassData data, _) => data.percentOfVisiting,
                 dataLabelSettings: DataLabelSettings(isVisible: true),
