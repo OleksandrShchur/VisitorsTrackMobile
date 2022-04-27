@@ -55,15 +55,10 @@ class _DaybookState extends State<Daybook> {
                 title: Text(this.subjectName),
                 subtitle: Text(this.date),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  ListTile(
-                    leading: Icon(Icons.supervised_user_circle_outlined),
-                    title: Text('Кількість студентів'),
-                    subtitle: Text('44'),
-                  ),
-                ],
+              ListTile(
+                leading: Icon(Icons.supervised_user_circle_outlined),
+                title: Text('Кількість студентів'),
+                subtitle: Text('44'),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
