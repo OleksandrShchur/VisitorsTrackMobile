@@ -94,7 +94,7 @@ class _DaybookState extends State<Daybook> {
                 name: 'Весь потік',
                 xValueMapper: (VisitingClassData data, _) => data.weekNumber.toString(),
                 yValueMapper: (VisitingClassData data, _) => data.percentOfVisiting,
-                dataLabelSettings: DataLabelSettings(isVisible: true),
+                dataLabelSettings: DataLabelSettings(isVisible: false),
               ),
               LineSeries<VisitingClassData, String>(
                 dataSource: <VisitingClassData>[
@@ -112,7 +112,7 @@ class _DaybookState extends State<Daybook> {
                 name: '401a',
                 xValueMapper: (VisitingClassData data, _) => data.weekNumber.toString(),
                 yValueMapper: (VisitingClassData data, _) => data.percentOfVisiting,
-                dataLabelSettings: DataLabelSettings(isVisible: true),
+                dataLabelSettings: DataLabelSettings(isVisible: false),
               ),
               LineSeries<VisitingClassData, String>(
                 dataSource: <VisitingClassData>[
@@ -130,7 +130,7 @@ class _DaybookState extends State<Daybook> {
                 name: '401б',
                 xValueMapper: (VisitingClassData data, _) => data.weekNumber.toString(),
                 yValueMapper: (VisitingClassData data, _) => data.percentOfVisiting,
-                dataLabelSettings: DataLabelSettings(isVisible: true),
+                dataLabelSettings: DataLabelSettings(isVisible: false),
               ),
               LineSeries<VisitingClassData, String>(
                 dataSource: <VisitingClassData>[
@@ -148,7 +148,7 @@ class _DaybookState extends State<Daybook> {
                 name: '401*',
                 xValueMapper: (VisitingClassData data, _) => data.weekNumber.toString(),
                 yValueMapper: (VisitingClassData data, _) => data.percentOfVisiting,
-                dataLabelSettings: DataLabelSettings(isVisible: true),
+                dataLabelSettings: DataLabelSettings(isVisible: false),
               ),
               LineSeries<VisitingClassData, String>(
                 dataSource: <VisitingClassData>[
@@ -166,7 +166,7 @@ class _DaybookState extends State<Daybook> {
                 name: '402',
                 xValueMapper: (VisitingClassData data, _) => data.weekNumber.toString(),
                 yValueMapper: (VisitingClassData data, _) => data.percentOfVisiting,
-                dataLabelSettings: DataLabelSettings(isVisible: true),
+                dataLabelSettings: DataLabelSettings(isVisible: false),
               )
             ]))),
           ],
