@@ -58,6 +58,16 @@ class _DaybookState extends State<Daybook> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
+                  ListTile(
+                    leading: Icon(Icons.supervised_user_circle_outlined),
+                    title: Text('Кількість студентів'),
+                    subtitle: Text('44'),
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
                   TextButton(
                     child: const Text('Відмітити присутніх'),
                     onPressed: () {
