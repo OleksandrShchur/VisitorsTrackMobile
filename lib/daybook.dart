@@ -81,14 +81,16 @@ class _DaybookState extends State<Daybook> {
                       /* ... */
                     },
                   ),
-                  TextButton(
-                    child: const Text('Змінити подію'),
-                    onPressed: () {
-                      /* ... */
-                    },
-                  ),
                   const SizedBox(width: 8),
                 ],
+              ),
+              Center(
+                child: TextButton(
+                  child: const Text('Змінити подію'),
+                  onPressed: () {
+                    /* ... */
+                  },
+                ),
               ),
             ])),
             Card(
