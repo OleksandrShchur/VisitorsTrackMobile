@@ -61,7 +61,7 @@ class _DaybookState extends State<Daybook> {
                 subtitle: Text('44'),
               ),
               ListTile(
-                leading: Icon(Icons.supervised_user_circle_outlined),
+                leading: Icon(Icons.access_time_rounded),
                 title: Text('Час проведення'),
                 subtitle: Text('Четвер, 9.50 - 11.10, щотижня'),
               ),
@@ -77,6 +77,12 @@ class _DaybookState extends State<Daybook> {
                   const SizedBox(width: 8),
                   TextButton(
                     child: const Text('Внести зміни у заняття'),
+                    onPressed: () {
+                      /* ... */
+                    },
+                  ),
+                  TextButton(
+                    child: const Text('Змінити подію'),
                     onPressed: () {
                       /* ... */
                     },
