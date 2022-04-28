@@ -30,7 +30,7 @@ class _UserProfileState extends State<UserProfile> {
             Center(
                 child: CircleAvatar(
               backgroundColor: Colors.brown.shade800,
-              child: const Text('AH'),
+              child: const Text('AH', style: TextStyle(fontSize: 24)),
               minRadius: 50,
             ))
           ])),
