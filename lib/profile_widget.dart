@@ -39,6 +39,10 @@ class _UserProfileState extends State<UserProfile> {
               title: Text("Name of student"),
               subtitle: Text("Group of student"),
             ),
+            ListTile(
+              leading: Icon(Icons.alternate_email_outlined, size: 48),
+              title: Text("Email of user"),
+            ),
           ])),
         ],
       ),
