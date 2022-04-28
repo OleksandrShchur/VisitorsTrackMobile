@@ -28,11 +28,17 @@ class _UserProfileState extends State<UserProfile> {
           Card(
               child: Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
             Center(
-                child: CircleAvatar(
-              backgroundColor: Colors.brown.shade800,
-              child: const Text('AH', style: TextStyle(fontWeight: FontWeight.w400, fontSize: 40)),
-              minRadius: 80,
-            ))
+              child: CircleAvatar(
+                backgroundColor: Colors.brown.shade800,
+                child: const Text('AH', style: TextStyle(fontWeight: FontWeight.w400, fontSize: 40)),
+                minRadius: 80,
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.account_box_outlined),
+              title: Text("Name of student"),
+              subtitle: Text("Group of student"),
+            ),
           ])),
         ],
       ),
