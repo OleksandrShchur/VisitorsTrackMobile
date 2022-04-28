@@ -4,6 +4,7 @@ import 'package:helloworld/table_calendar.dart';
 import 'package:helloworld/group_widget.dart';
 import 'package:helloworld/notification_widget.dart';
 import 'package:helloworld/login_widget.dart';
+import 'package:helloworld/profile_widget.dart';
 
 class HomeWidget extends StatefulWidget {
   @override
@@ -35,7 +36,7 @@ class HomeState extends State<HomeWidget> {
             ),
             title: const Text('Мій профіль'),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(context, MaterialPageRoute(builder: (context) => (UserProfile())));
             },
           ),
           ListTile(
