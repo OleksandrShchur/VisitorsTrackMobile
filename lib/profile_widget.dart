@@ -31,6 +31,7 @@ class _UserProfileState extends State<UserProfile> {
                 child: CircleAvatar(
               backgroundColor: Colors.brown.shade800,
               child: const Text('AH'),
+              minRadius: 50,
             ))
           ])),
         ],
