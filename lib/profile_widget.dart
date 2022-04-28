@@ -60,8 +60,8 @@ class _UserProfileState extends State<UserProfile> {
                   title: Text("Email of user"),
                 ),
                 Container(
-                    child: SfCartesianChart(primaryXAxis: CategoryAxis(), title: ChartTitle(text: 'Аналіз відвідуваності заняття'), legend: new Legend(isVisible: true, title: LegendTitle(text: 'Дані')), tooltipBehavior: _tooltipBehavior, series: <LineSeries<VisitingClassData, String>>[
-                  LineSeries<VisitingClassData, String>(
+                    child: SfCartesianChart(primaryXAxis: CategoryAxis(), title: ChartTitle(text: 'Аналіз відвідуваності занять'), legend: new Legend(isVisible: true, title: LegendTitle(text: 'Дані')), tooltipBehavior: _tooltipBehavior, series: <StackedArea100Series<VisitingClassData, String>>[
+                  StackedArea100Series<VisitingClassData, String>(
                     dataSource: <VisitingClassData>[
                       VisitingClassData(1, random.nextInt(50) + 40),
                       VisitingClassData(2, random.nextInt(50) + 40),
