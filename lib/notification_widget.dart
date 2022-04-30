@@ -5,11 +5,12 @@ class NotificationList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("Сповіщення"),
-        ),
-        floatingActionButton: FloatingActionButton(onPressed: () => {}, tooltip: 'Додати сповіщення', child: const Icon(Icons.add)),
-        body: Center(child: SwipeList()));
+      appBar: AppBar(
+        title: Text("Сповіщення"),
+      ),
+      floatingActionButton: FloatingActionButton(onPressed: () => {}, tooltip: 'Додати сповіщення', child: const Icon(Icons.add)),
+      body: Center(child: SwipeList()),
+    );
   }
 }
 
@@ -38,6 +39,7 @@ class ListItemWidget extends State<SwipeList> {
     super.initState();
 
     items = [
+      new Notification("05.05.2022 - студентська конференція", "У четвер, 05.05.2022 буде проведено студентську конференцію.", "Викладачі, студенти", "", DateTime(22, 4, 2022), ''),
       new Notification("26.04.2022 - Робочий день", "Понеділок, 26.04.2022 буде робочим днем за звичним розкладом.", "Викладачі, студенти", "", DateTime(22, 4, 2022), ''),
       new Notification("Вчена рада 15.04.2022", "Вчену раду ФМІ буде проведено 15 квітня об 14.40.", "Вчена рада", "", DateTime(4, 4, 2022), ''),
       new Notification("День відкритих дверей", "04.04.2022 буде проведено день відкритих дверей ФМІ.", "Викладачі, студенти", "", DateTime(30, 3, 2022), ''),
