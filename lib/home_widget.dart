@@ -83,9 +83,9 @@ class HomeState extends State<HomeWidget> {
               Icons.wifi_protected_setup_rounded,
               color: Colors.black,
               size: 24.0,
-              semanticLabel: 'Безпека',
+              semanticLabel: 'Оновити застосунок',
             ),
-            title: const Text('Безпека'),
+            title: const Text('Оновити застосунок'),
             onTap: () {
               Navigator.pop(context);
             },
@@ -95,9 +95,9 @@ class HomeState extends State<HomeWidget> {
               Icons.warning_sharp,
               color: Colors.black,
               size: 24.0,
-              semanticLabel: 'Повідомити про помилку',
+              semanticLabel: 'Служба підтримки',
             ),
-            title: const Text('Повідомити про помилку'),
+            title: const Text('Служба підтримки'),
             onTap: () {
               Navigator.pop(context);
             },
