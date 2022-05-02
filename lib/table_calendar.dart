@@ -214,9 +214,7 @@ List<Meeting> _getDataSource() {
   final DateTime startTime3 = DateTime(today.year, today.month, today.day, 11, 30, 0);
   final DateTime endTime3 = startTime3.add(const Duration(hours: 1, minutes: 20));
   meetings.add(Meeting('Розробка комп. ігор (лекція)', startTime, endTime, const Color(0xFF0F8644), "https://meet.google.com/pkt-eade-bpm", '39', [
-    '401a',
-    '401б',
-    '401*',
+    '401',
     '421'
   ]));
   meetings.add(Meeting('Розробка комп. ігор (практика)', startTime2, endTime2, const Color(0xFF3272d1), "https://meet.google.com/pkt-eade-bpm", '3', [
