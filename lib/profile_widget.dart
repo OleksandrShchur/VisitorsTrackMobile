@@ -46,18 +46,18 @@ class _UserProfileState extends State<UserProfile> {
                 Center(
                   child: CircleAvatar(
                     backgroundColor: Colors.brown.shade800,
-                    child: const Text('AH', style: TextStyle(fontWeight: FontWeight.w400, fontSize: 40)),
+                    child: const Text('OS', style: TextStyle(fontWeight: FontWeight.w400, fontSize: 40)),
                     minRadius: 80,
                   ),
                 ),
                 ListTile(
                   leading: Icon(Icons.account_box_outlined, size: 40),
-                  title: Text("Name of student"),
-                  subtitle: Text("Group of student"),
+                  title: Text("Олександр Іванович Щур"),
+                  subtitle: Text("401а"),
                 ),
                 ListTile(
                   leading: Icon(Icons.alternate_email_outlined, size: 40),
-                  title: Text("Email of user"),
+                  title: Text("shchur.oleksandr@chnu.edu.ua"),
                 ),
                 Container(
                     child: SfCartesianChart(primaryXAxis: CategoryAxis(), title: ChartTitle(text: 'Аналіз відвідуваності занять'), legend: new Legend(isVisible: true, title: LegendTitle(text: 'Дані')), tooltipBehavior: _tooltipBehavior, series: <StackedArea100Series<VisitingClassData, String>>[
