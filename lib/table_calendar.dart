@@ -207,22 +207,23 @@ class _ScheduleTableState extends State<ScheduleTable> {
 List<Meeting> _getDataSource() {
   final List<Meeting> meetings = <Meeting>[];
   final DateTime today = DateTime.now();
-  final DateTime startTime = DateTime(today.year, today.month, today.day, 9, 50, 0);
+  final DateTime startTime = DateTime(today.year, today.month, today.day, 8, 20, 0);
   final DateTime endTime = startTime.add(const Duration(hours: 1, minutes: 20));
-  final DateTime startTime2 = DateTime(today.year, today.month, today.day, 11, 30, 0);
+  final DateTime startTime2 = DateTime(today.year, today.month, today.day, 9, 50, 0);
   final DateTime endTime2 = startTime2.add(const Duration(hours: 1, minutes: 20));
-  final DateTime startTime3 = DateTime(today.year, today.month, today.day, 13, 00, 0);
+  final DateTime startTime3 = DateTime(today.year, today.month, today.day, 11, 30, 0);
   final DateTime endTime3 = startTime3.add(const Duration(hours: 1, minutes: 20));
-  meetings.add(Meeting('Аналіз даних (лекція)', startTime, endTime, const Color(0xFF0F8644), "https://meet.google.com/pkt-eade-bpm", '39', [
+  meetings.add(Meeting('Розробка комп. ігор (лекція)', startTime, endTime, const Color(0xFF0F8644), "https://meet.google.com/pkt-eade-bpm", '39', [
     '401a',
     '401б',
-    '402',
-    '401*'
+    '401*',
+    '421'
   ]));
-  meetings.add(Meeting('Аналіз даних (практика)', startTime2, endTime2, const Color(0xFF3272d1), "https://meet.google.com/pkt-eade-bpm", '3', [
+  meetings.add(Meeting('Розробка комп. ігор (практика)', startTime2, endTime2, const Color(0xFF3272d1), "https://meet.google.com/pkt-eade-bpm", '3', [
     '401a',
     '401б',
-    '401*'
+    '401*',
+    '421'
   ]));
   meetings.add(Meeting('Іноземна мова', startTime3, endTime3, const Color(0xFFa87e2f), "https://meet.google.com/pkt-eade-bpm", '11', [
     '401a',
